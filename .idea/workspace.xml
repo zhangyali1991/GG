@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="648714cd-ad60-402f-842a-f0700fd81f3d" name="Default" comment="类名规范">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/anbo_sdk_1_0_0_2_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/env/EnvUAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/env/EnvUAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/APPPostSignContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/AppCreate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/BA0064.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/CuiShouAPPLA0036.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/CuiShouBA0023.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/DaiChangBackShd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/JigouSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/LB0030.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/ReductionInsert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shanghudai/RepayBackShd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BaseInterDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HttpPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpPostBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpPostBackCuishou.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpPostCuishou.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RequestLA0029DTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai" beforeDir="true" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/Advfinished.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/AdvfinishedTyr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/AppAdvancerepaymentYD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/Create.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/CreateShort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/CuiShouCBA0023.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/DaiChangBackYd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/RepayBackYd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yidai/YidaiCuiShouAPPLO0036.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testng.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickGet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click_sjxpGet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickPost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_get.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_get.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsPre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="313" column="51" selection-start-line="313" selection-start-column="51" selection-end-line="313" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataPre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="27" column="86" lean-forward="true" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>serial_number</find>
+      <find>inner</find>
+      <find>/api/v2/advert-pos&quot;</find>
+      <find>adPos_url</find>
+      <find>mediaType</find>
+      <find>parkId</find>
+      <find>assertJ</find>
+      <find>pubK</find>
+      <find>/api/v3/advert-pos</find>
+      <find>api/v1/advert-pos</find>
+      <find>medium</find>
+      <find>MEUCIGWaMMKtuKdRmn4D8re5n3QiAbGK0lZhJjm+cWh1E+YCAiEAopVErTKN5F+/Upt3cmGoK89bI/t1WUphWmnfQM8va64=</find>
+      <find>MEUCIQCfKGvVJcwwm9vSC7S8GtbjLpyld0tGu76/2V3Z6IP4TAIgbPPqyuU0Etf17jOdgrYi22OkjI2zrNRgYDREu/mA438=</find>
+      <find>MEUCIGDAQXp45GYzESJXdDsrrPcL+BFsLpPlP7goDinom/otAiEAypOz77sC8gYepghwOnoN25ArB86YQGCkuSWoIpfvOJQ=</find>
+      <find>MEQCIFY2QYYzHfL9LiEXyVmC9s35XZ5evNTDvs247AsQOCG7AiB2kHm4XGxYtu07ENWrD5riuOxAb7dN2qrkacsHZdiREw==</find>
+      <find>MEUCIFNYZN/DxRLobs80a2KV4tGFjzTXd6QfrU/KJM1tQzOEAiEAsvqgWUNHWeUNd3MbWfl9QDLibWgTMIc2mdB2AEaO0/s=</find>
+      <find>MEYCIQDoGHqXhFC6CsEoRebRknVFsDlmQGELQKCXIrMyRag+BwIhAP5xjSVwUs3y82C0FTLyTLrvFNP1OV4nvZxYnVy6bmjP</find>
+      <find>userLicense</find>
+      <find>MEQCIHCmmh/6DUe3aL8yOkcd3L1w1Z+noGAGJwQxXl8NpQgbAiAvh/vH0s35mYuxMqE4tP/uI3C6CMXSloIQ6NHH3LWEvg==</find>
+      <find>MY车场Auto1022104100</find>
+      <find>MEUCIEiz46BVHL4wAzSSGuIJu1EjQnbv8ZjXNeyh6IxYWCWRAiEAyWreD5P1O5f1rh6gyQNFm44VsKYJ3qiTUOJT9m30ni8=</find>
+      <find>mediumType</find>
+      <find>apache-maven-3.5.3</find>
+      <find>basedir</find>
+      <find>713400</find>
+      <find>0351</find>
+      <find>TaiYuan</find>
+      <find>/api/v1/advert/ticket</find>
+      <find>exposure_url_new</find>
+      <find>exposure_post</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\zhaoyanfei\Documents\WeChat Files\feifei545869238\FileStorage\File\2020-03\anbo-sdk-1.0.0.jar</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/basedata/CreateKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basedata/BaseData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/HttpGG.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/AdOpenApiTestBajixiang.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/ParkOpenApiTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/AdPosOpenApiTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/AdOpenApiTestMakusi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basedata/HttpGG.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGaoShengChan/AccountShengchan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGaoShengChan/AdOpenApiTestMakusi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/AdOpenApiTestHuiGui.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GuangGao/AccountOpenApiTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/AccountCreate_Update.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/AccountCreate_Update.java" />
+        <option value="$PROJECT_DIR$/src/main/java/concurrency/PerfTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/OpenClick_advertiseName_3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePositionPlanOpenClick_trafficName_7.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePositionPlan_trafficName_9.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePosition_2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateKeyTrafficParkAdvertisePositionPlanOpenClick_8.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/jdbc/MysqlDeal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/UpdateTraffic_mobile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/concurrency/OpenAndClick_perf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickPost.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/ParkDateSave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/impl/CreateAdvertisePosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_post.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Park_AdvertisePosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Park_AdvertisePosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click_sjxpGet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_post.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsPre.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataPre.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click_new.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsPro.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click_sjxp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/CreateKeyTraffic_1.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/CreateParkAdvertisePosition_2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_get.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_get.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickGet.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_repository" />
+        <option name="userSettingsFile" value="D:\Maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GG" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GG" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-422" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="anbo-sdk-1.1.0.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="anbo-sdk-1.1.0.jar" type="ab9368bb:PsiFileNode" />
+              <item name="zzrb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="anbo-sdk-1.1.0.jar" type="ab9368bb:PsiFileNode" />
+              <item name="zzrb" type="462c0819:PsiDirectoryNode" />
+              <item name="enumm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ad" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ad" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ad" type="462c0819:PsiDirectoryNode" />
+              <item name="openApi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ad" type="462c0819:PsiDirectoryNode" />
+              <item name="openApi" type="462c0819:PsiDirectoryNode" />
+              <item name="pre" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/test3/cz-api-gateway-test" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4777143" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\钱包文件\广告\GG" />
+      <recent name="D:\BaiduNetdiskDownload\GuangGao\src\main\java\GuangGaoShengChan" />
+      <recent name="D:\BaiduNetdiskDownload\Hexin\src\main\resources" />
+      <recent name="D:\BaiduNetdiskDownload\Hexin\src\main\java\mybatis" />
+      <recent name="D:\2018钱包\test3\Hexin\src\test\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qb.ad.openApi.product" />
+      <recent name="com.qb.ad.openApi.pre" />
+      <recent name="com.qb.ad.openApi.zyl" />
+      <recent name="GuangGao" />
+      <recent name="shanghudai" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\BaiduNetdiskDownload\Hexin\src\test\java\utils" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.Open_ClickGet.Open_Click">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenClick_advertiseName_3.openClick_advertiseName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qb.ad.openApi.zyl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qb.ad.openApi.zyl" />
+      <option name="MAIN_CLASS_NAME" value="com.qb.ad.openApi.zyl.OpenClick_advertiseName_3" />
+      <option name="METHOD_NAME" value="openClick_advertiseName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenClick_advertiseName_get.openClick_advertiseName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qb.ad.openApi.zyl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qb.ad.openApi.zyl" />
+      <option name="MAIN_CLASS_NAME" value="com.qb.ad.openApi.zyl.OpenClick_advertiseName_get" />
+      <option name="METHOD_NAME" value="openClick_advertiseName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenClick_advertiseName_post.openClick_advertiseName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qb.ad.openApi.zyl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qb.ad.openApi.zyl" />
+      <option name="MAIN_CLASS_NAME" value="com.qb.ad.openApi.zyl.OpenClick_advertiseName_post" />
+      <option name="METHOD_NAME" value="openClick_advertiseName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenClick_sjxp_get.openClick_advertiseName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qb.ad.openApi.zyl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qb.ad.openApi.zyl" />
+      <option name="MAIN_CLASS_NAME" value="com.qb.ad.openApi.zyl.OpenClick_sjxp_get" />
+      <option name="METHOD_NAME" value="openClick_advertiseName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Open_ClickGet.Open_Click" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qb.ad.openApi.pre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qb.ad.openApi.pre" />
+      <option name="MAIN_CLASS_NAME" value="com.qb.ad.openApi.pre.Open_ClickGet" />
+      <option name="METHOD_NAME" value="Open_Click" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.OpenClick_advertiseName_3.openClick_advertiseName" />
+      <item itemvalue="TestNG.OpenClick_advertiseName_get.openClick_advertiseName" />
+      <item itemvalue="TestNG.OpenClick_advertiseName_post.openClick_advertiseName" />
+      <item itemvalue="TestNG.OpenClick_sjxp_get.openClick_advertiseName" />
+      <item itemvalue="TestNG.Open_ClickGet.Open_Click" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Open_ClickGet.Open_Click" />
+        <item itemvalue="TestNG.OpenClick_advertiseName_3.openClick_advertiseName" />
+        <item itemvalue="TestNG.OpenClick_sjxp_get.openClick_advertiseName" />
+        <item itemvalue="TestNG.OpenClick_advertiseName_get.openClick_advertiseName" />
+        <item itemvalue="TestNG.OpenClick_advertiseName_post.openClick_advertiseName" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\zhaoyanfei\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+    <option name="FORCE_UPDATE" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="648714cd-ad60-402f-842a-f0700fd81f3d" name="Default" comment="" />
+      <created>1559018427662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559018427662</updated>
+      <workItem from="1559018437386" duration="1051000" />
+      <workItem from="1559022503311" duration="1011000" />
+      <workItem from="1559023622676" duration="5032000" />
+      <workItem from="1559563104584" duration="85081000" />
+      <workItem from="1561714866671" duration="2133000" />
+      <workItem from="1561719524486" duration="1821000" />
+      <workItem from="1562154942806" duration="190000" />
+      <workItem from="1562209200662" duration="7200000" />
+      <workItem from="1562509697650" duration="8702000" />
+      <workItem from="1562548107421" duration="2175000" />
+      <workItem from="1562556394144" duration="38870000" />
+      <workItem from="1563169381394" duration="5485000" />
+      <workItem from="1563335931345" duration="82617000" />
+      <workItem from="1566208484812" duration="714000" />
+      <workItem from="1566291613411" duration="15561000" />
+      <workItem from="1566529417191" duration="5793000" />
+      <workItem from="1566800612796" duration="27509000" />
+      <workItem from="1567995767628" duration="2554000" />
+      <workItem from="1568272018534" duration="599000" />
+      <workItem from="1570523026454" duration="143679000" />
+      <workItem from="1576826007543" duration="863000" />
+      <workItem from="1577442732240" duration="10470000" />
+      <workItem from="1578889701059" duration="21839000" />
+      <workItem from="1582702198462" duration="87000" />
+      <workItem from="1583148514197" duration="16278000" />
+      <workItem from="1584677463237" duration="5853000" />
+      <workItem from="1584685170885" duration="126320000" />
+      <workItem from="1586256407730" duration="3918000" />
+      <workItem from="1586421644428" duration="2112000" />
+      <workItem from="1586757008526" duration="3574000" />
+      <workItem from="1598249063493" duration="10526000" />
+      <workItem from="1598525171882" duration="1357000" />
+      <workItem from="1599457466936" duration="74201000" />
+      <workItem from="1602211784669" duration="75822000" />
+      <workItem from="1603099493604" duration="129236000" />
+      <workItem from="1605506555967" duration="2805000" />
+      <workItem from="1605513348830" duration="40840000" />
+    </task>
+    <task id="LOCAL-00002" summary="优化进件">
+      <created>1559022840409</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559022840409</updated>
+    </task>
+    <task id="LOCAL-00003" summary="优化进件">
+      <created>1559022883151</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559022883151</updated>
+    </task>
+    <task id="LOCAL-00004" summary="优化进件">
+      <created>1559125248434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559125248434</updated>
+    </task>
+    <task id="LOCAL-00005" summary="商户贷进件+签约">
+      <created>1559716892609</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559716892609</updated>
+    </task>
+    <task id="LOCAL-00006" summary="优化易贷">
+      <created>1561030192977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561030192977</updated>
+    </task>
+    <task id="LOCAL-00007" summary="优化参数">
+      <created>1561531037146</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561531037146</updated>
+    </task>
+    <task id="LOCAL-00008" summary="商户贷进件+签约">
+      <created>1562567691170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562567691172</updated>
+    </task>
+    <task id="LOCAL-00009" summary="从test移动到main">
+      <created>1562831623850</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562831623850</updated>
+    </task>
+    <task id="LOCAL-00010" summary="从test移动到main">
+      <created>1562832144625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562832144625</updated>
+    </task>
+    <task id="LOCAL-00011" summary="从test移动到main">
+      <created>1562832497095</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562832497095</updated>
+    </task>
+    <task id="LOCAL-00012" summary="将参数化添加到testng.xml">
+      <created>1562834791452</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562834791452</updated>
+    </task>
+    <task id="LOCAL-00013" summary="将参数化添加到testng.xml">
+      <created>1562838427956</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1562838427956</updated>
+    </task>
+    <task id="LOCAL-00014" summary="添加备注">
+      <created>1563334866221</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563334866221</updated>
+    </task>
+    <task id="LOCAL-00015" summary="添加备注">
+      <created>1563526373380</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526373380</updated>
+    </task>
+    <task id="LOCAL-00016" summary="添加备注">
+      <created>1563526389408</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526389408</updated>
+    </task>
+    <task id="LOCAL-00017" summary="添加备注">
+      <created>1563526401798</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526401798</updated>
+    </task>
+    <task id="LOCAL-00018" summary="添加备注">
+      <created>1563526603495</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526603495</updated>
+    </task>
+    <task id="LOCAL-00019" summary="添加备注">
+      <created>1563526646750</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526646750</updated>
+    </task>
+    <task id="LOCAL-00020" summary="添加备注">
+      <created>1564027281845</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1564027281845</updated>
+    </task>
+    <task id="LOCAL-00021" summary="添加备注">
+      <created>1565077794875</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1565077794875</updated>
+    </task>
+    <task id="LOCAL-00022" summary="添加备注">
+      <created>1565078061866</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1565078061866</updated>
+    </task>
+    <task id="LOCAL-00023" summary="添加备注">
+      <created>1565079277330</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1565079277330</updated>
+    </task>
+    <task id="LOCAL-00024" summary="添加备注">
+      <created>1565079324532</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1565079324532</updated>
+    </task>
+    <task id="LOCAL-00025" summary="添加备注">
+      <created>1565765492787</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1565765492787</updated>
+    </task>
+    <task id="LOCAL-00026" summary="类名规范">
+      <created>1565943864052</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1565943864052</updated>
+    </task>
+    <task id="LOCAL-00027" summary="类名规范">
+      <created>1565943934476</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1565943934476</updated>
+    </task>
+    <task id="LOCAL-00028" summary="类名规范">
+      <created>1565944061812</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1565944061812</updated>
+    </task>
+    <task id="LOCAL-00029" summary="类名规范">
+      <created>1565944072613</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1565944072613</updated>
+    </task>
+    <task id="LOCAL-00030" summary="增加环境sit5 url">
+      <created>1566529521313</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1566529521313</updated>
+    </task>
+    <task id="LOCAL-00031" summary="datebase增加sit5">
+      <created>1566529544801</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1566529544801</updated>
+    </task>
+    <task id="LOCAL-00032" summary="类名规范">
+      <created>1567134421490</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1567134421490</updated>
+    </task>
+    <task id="LOCAL-00033" summary="类名规范">
+      <created>1567134435807</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1567134435807</updated>
+    </task>
+    <task id="LOCAL-00034" summary="类名规范">
+      <created>1567134466977</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1567134466977</updated>
+    </task>
+    <task id="LOCAL-00035" summary="类名规范">
+      <created>1567135036147</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1567135036147</updated>
+    </task>
+    <task id="LOCAL-00036" summary="提前结清流水号加时间戳">
+      <created>1567493425488</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1567493425488</updated>
+    </task>
+    <task id="LOCAL-00037" summary="去掉流水号">
+      <created>1567493506075</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1567493506075</updated>
+    </task>
+    <task id="LOCAL-00038" summary="去掉提前结清流水参数">
+      <created>1567493681059</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1567493681059</updated>
+    </task>
+    <task id="LOCAL-00039" summary="时间戳">
+      <created>1567493954181</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1567493954181</updated>
+    </task>
+    <task id="LOCAL-00040" summary="修改流水规则">
+      <created>1567493982074</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1567493982074</updated>
+    </task>
+    <task id="LOCAL-00041" summary="添加date变long方法">
+      <created>1571039965398</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1571039965398</updated>
+    </task>
+    <task id="LOCAL-00042" summary="易贷催收认款">
+      <created>1578894774096</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1578894774096</updated>
+    </task>
+    <task id="LOCAL-00043" summary="易贷催收">
+      <created>1578894881335</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1578894881335</updated>
+    </task>
+    <task id="LOCAL-00044" summary="类名规范">
+      <created>1578894973712</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1578894973712</updated>
+    </task>
+    <task id="LOCAL-00045" summary="httppost催收">
+      <created>1578895062443</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1578895062443</updated>
+    </task>
+    <task id="LOCAL-00046" summary="更新">
+      <created>1578895159671</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1578895159671</updated>
+    </task>
+    <task id="LOCAL-00047" summary="base更新">
+      <created>1578895243099</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1578895243099</updated>
+    </task>
+    <task id="LOCAL-00048" summary="类名规范">
+      <created>1578895367457</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1578895367457</updated>
+    </task>
+    <task id="LOCAL-00049" summary="类名规范">
+      <created>1578895441190</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1578895441190</updated>
+    </task>
+    <task id="LOCAL-00050" summary="更新pom">
+      <created>1578896137291</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1578896137292</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 44m 58s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 45m 42s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 46m 12s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 46m 46s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 47m 51s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 15h 48m 20s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 16h 32m 35s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 16h 35m 05s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 16h 35m 28s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Open_ClickGet_Open_Click - 2020.11.25 at 16h 36m 04s.xml">
+      <configuration name="Open_ClickGet.Open_Click" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="963878000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-422" y="-1088" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4871355" visible="true" weight="0.2761194" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Structure" order="4" sideWeight="0.5128645" side_tool="true" weight="0.21860817" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5240642" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49761903" visible="true" weight="0.45020747" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3113497" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50079364" side_tool="true" weight="0.21319018" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946696" weight="0.30912864" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49920633" weight="0.52607363" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32933104" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="RestServices" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32942432" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Maven" order="11" weight="0.32936507" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4871355" visible="true" weight="0.21104388" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Structure" order="4" sideWeight="0.5128645" side_tool="true" weight="0.21860817" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5240642" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.13722126" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41337907" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.5077187" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33262032" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.121783875" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.32933104" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="RestServices" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32942432" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改pom" />
+    <MESSAGE value="优化进件" />
+    <MESSAGE value="优化易贷" />
+    <MESSAGE value="优化参数" />
+    <MESSAGE value="商户贷进件+签约" />
+    <MESSAGE value="从test移动到main" />
+    <MESSAGE value="将参数化添加到testng.xml" />
+    <MESSAGE value="添加备注123" />
+    <MESSAGE value="添加备注" />
+    <MESSAGE value="增加环境sit5 url" />
+    <MESSAGE value="datebase增加sit5" />
+    <MESSAGE value="提前结清流水号加时间戳" />
+    <MESSAGE value="去掉流水号" />
+    <MESSAGE value="去掉提前结清流水参数" />
+    <MESSAGE value="时间戳" />
+    <MESSAGE value="修改流水规则" />
+    <MESSAGE value="添加date变long方法" />
+    <MESSAGE value="易贷催收认款" />
+    <MESSAGE value="易贷催收" />
+    <MESSAGE value="httppost催收" />
+    <MESSAGE value="更新" />
+    <MESSAGE value="base更新" />
+    <MESSAGE value="类名规范" />
+    <MESSAGE value="更新pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新pom" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/jdbc/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/OpenClick_traffics_parks_random_6.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/OpenClick_parkName_4.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/OpenClick_advertiseName_users_5.java" />
+    <entry file="jar://$PROJECT_DIR$/lib/anbo-sdk-1.0.0.jar!/com/zzrb/util/ECCSignUtil.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/PerfTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateKeyTraffic_1.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/OpenClick_advertiseName_3.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePositionPlanOpenClick_trafficName_7.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePositionPlan_trafficName_9.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateParkAdvertisePosition_2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/CreateKeyTrafficParkAdvertisePositionPlanOpenClick_8.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/sit/UpdateTraffic_mobile.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/jdbc/MysqlDeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSONPath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="348" column="25" selection-start-line="348" selection-start-column="25" selection-end-line="348" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/2.5.0/assertj-core-2.5.0-sources.jar!/org/assertj/core/api/Assertions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="624" column="47" selection-start-line="624" selection-start-column="47" selection-end-line="624" selection-end-column="47" />
+          <folding>
+            <element signature="e#22633#22634#0" expanded="true" />
+            <element signature="e#22676#22677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/StrJSONPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/impl/CreateAdvertisePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="2" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/AccountCreate_Update.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/ParkDateSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="49" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/HttpGG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="48" column="62" lean-forward="true" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click_new.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Park_AdvertisePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsPro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4579">
+          <caret line="253" column="32" selection-start-line="253" selection-start-column="26" selection-end-line="253" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/anbo-sdk-1.0.0.jar!/com/zzrb/enumm/CityIdEnum.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click_sjxp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/AccountCreate_Update.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/product/Open_Click.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/entity/BaseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Park_AdvertisePosition.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/concurrency/OpenAndClick_perf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/anbo-sdk-1.1.0.jar!/com/zzrb/enumm/CityIdEnumOld.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/anbo-sdk-1.1.0.jar!/com/zzrb/enumm/CityIdEnum.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/CreateParkAdvertisePosition_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/CreateKeyTraffic_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="491" column="23" selection-start-line="491" selection-start-column="23" selection-end-line="491" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_get.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_sjxp_get.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/zyl/OpenClick_advertiseName_3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_Click_sjxpGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/util/ApiUtilsPre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="313" column="51" selection-start-line="313" selection-start-column="51" selection-end-line="313" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/entity/DataPre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="27" column="86" lean-forward="true" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qb/ad/openApi/pre/Open_ClickGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4777143" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4777143" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4777143" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>GG</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4777143" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.47</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4777143" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

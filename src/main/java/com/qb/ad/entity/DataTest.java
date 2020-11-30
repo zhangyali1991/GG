@@ -31,6 +31,7 @@ public class DataTest {
     public static final String exposure_urlNew = url_open +"/api/v1/advert/list";
     public static final String click_url = url_click +"/api/v1/advert/redirect/";
     public static final String click_url_landing = url_click +"/api/v1/advert/landing/";
+    public static final String profit_url = url_open +"/api/v1/park/profit/";
 
     public static final String login_url = url_post + "/api-user/user/login";
     public static final String traffic_update_url = url_post + "/api-post/traffic/update";

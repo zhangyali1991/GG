@@ -27,7 +27,7 @@ public class OpenClick_advertiseName_get {
         return new Object[][]
 //                流量主名称,车场名称，广告位id，媒体类型(1-公众号；2-小程序;4-支付宝;3-app)
 //                {{"ZYL流量主Auto1021153856","MY车场Auto1022104100","3","4"}};
-                {{"ZYL流量主Auto1119113247","MY车场Auto1119155342","5","1"}};
+                {{"ZYL流量主Auto1119113247","MY车场Auto1119155342","1","1"}};
     }
     @Test(dataProvider = "data")
     public static void openClick_advertiseName(String traffic_name,String parking_name,String adPosId,String medium) throws Exception {

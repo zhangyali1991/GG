@@ -28,7 +28,7 @@ public class OpenClick_advertiseName_3 {
         return new Object[][]
 //                流量主名称,车场名称，广告位id(1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功)
 //                {{"ZYL流量主Auto1021153856","MY车场Auto1022104100","5"}};
-                {{"ZYL流量主Auto1119113247","MY车场Auto1119155342","5"}};
+                {{"ZYL流量主Auto1119113247","MY车场Auto1119155342","1"}};
     }
 
     @Test(dataProvider = "data")

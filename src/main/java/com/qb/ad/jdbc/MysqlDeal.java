@@ -17,7 +17,7 @@ public class MysqlDeal {
     static ResultSet rs = null;
 
     //查询单条记录，返回map，对应value通过get(key)方法获取
-    public static Map<String,String> mysqlDeal(String sql,String[] keys) {
+    public static Map<String, String> mysqlDeal(String sql, String[] keys) {
 
         try {
             connection = JdbcUtils.getConnection();
@@ -25,7 +25,7 @@ public class MysqlDeal {
 //            String sql2 = "SELECT * FROM pos_terminal_info WHERE terminal_no ='" + sql + "'";
             System.out.println(sql);
             rs = statement.executeQuery(sql);
-            if(rs.next()) {
+            if (rs.next()) {
                 System.out.println("成功");
 
                 //创建map
@@ -33,8 +33,8 @@ public class MysqlDeal {
                 //遍历数组
                 for (String key : keys) {
 //                    System.out.println(key);
-                    String value  = rs.getString(key);
-                    resMap.put(key, value );
+                    String value = rs.getString(key);
+                    resMap.put(key, value);
                 }
                 return resMap;
             } else {
@@ -50,7 +50,7 @@ public class MysqlDeal {
     }
 
     //查询多条记录，返回数组
-    public static String[] mysqlDeals(String sql,String key) {
+    public static String[] mysqlDeals(String sql, String key) {
 
         try {
             connection = JdbcUtils.getConnection();
@@ -60,20 +60,42 @@ public class MysqlDeal {
             System.out.println(sql);
             rs = statement.executeQuery(sql);
             String values = "";
-            while(rs.next()){//循环判断结果集是否存在下一行数据
+            while (rs.next()) {//循环判断结果集是否存在下一行数据
                 //ResultSet对象的getXxx()方法根据数据库的字段名称将数据取出来
                 String value = rs.getString(key);
 //                String password1 = rs.getString("password1");
                 //打印取出来的第一条数据
-                if (values.equals( "" )){
+                if (values.equals("")) {
                     values = value;
-                }else {
+                } else {
                     values = values + "-" + value;
                 }
 
             }
             System.out.println(values);
-            return values.split( "-" );
+            return values.split("-");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //JdbcUtils.close(connection, statement, rs);
+        }
+        return null;
+    }
+
+    //返回单条数据
+    public static String mysqlDealsString(String sql, String key) {
+
+        try {
+            connection = JdbcUtils.getConnection();
+            statement = connection.createStatement();
+
+            rs = statement.executeQuery(sql);
+            String value="";
+            while(rs.next()){
+                 value = rs.getString(key);
+            }
+
+            return value;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -91,7 +113,7 @@ public class MysqlDeal {
             System.out.println(sql);
 //            rs = statement.executeQuery(sql);
 //            System.out.println("返回结果: "+statement.executeUpdate( sql ));
-            if(statement.executeUpdate( sql ) == 1) {
+            if (statement.executeUpdate(sql) == 1) {
                 System.out.println("执行成功");
             } else {
                 System.out.println("执行失败！");
@@ -102,6 +124,7 @@ public class MysqlDeal {
             JdbcUtils.close(connection, statement, rs);
         }
     }
+
 
     public static void main(String[] args) throws SQLException {
 //        String[] str=new String[]{"id","terminal_no"};
@@ -118,14 +141,14 @@ public class MysqlDeal {
 //        String current = formatter.format( new Date() );
 //        String contactMobile ="188" + current.substring( 2,10 );
 //        System.out.print("contactMobile: " + contactMobile);
-        String[] str=new String[]{"serial_number","traffic_id"};
+        String[] str = new String[]{"serial_number", "traffic_id"};
         String sql = "SELECT parking_id from ad_location_strategy WHERE ad_id=(SELECT id from ad_info WHERE name='孵化拆分广告主001202007_45')";
 
-        String strs[] = mysqlDeals(sql,"parking_id");
+        String strs[] = mysqlDeals(sql, "parking_id");
         System.out.println(strs.length);
 //        int number = (int)(Math.random()*100);
 
-        for (int tmp2 = 0;tmp2 < 100;tmp2++){
+        for (int tmp2 = 0; tmp2 < 100; tmp2++) {
 //            System.out.println((int)(Math.random()*100)%(strs.length));
 
         }

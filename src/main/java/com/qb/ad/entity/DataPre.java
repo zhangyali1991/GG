@@ -28,6 +28,7 @@ public class DataPre {
     public static final String exposure_url_new = url_open_pre +"/api/v1/advert/list";
     public static final String click_url = url_click_pre +"/api/v1/advert/redirect/";
     public static final String park_data_url = url_open_pre +"/api/v1/vehicle/data";
+    public static final String profit_url_pre = url_open_pre +"/api/v1/park/profit/";
 
     public static final String login_url = url_post_pre + "/api-user/user/login";
     public static final String traffic_update_url = url_post_pre + "/api-post/traffic/update";

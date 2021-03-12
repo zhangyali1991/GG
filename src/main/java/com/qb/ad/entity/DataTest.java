@@ -1,10 +1,7 @@
 package com.qb.ad.entity;
-
 import com.zzrb.enumm.CityIdEnum;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 /**
  * 测试数据
@@ -30,7 +27,8 @@ public class DataTest {
     public static final String exposure_sjxp_url = url_open +"/api/v1/advert/ticket";
     public static final String exposure_urlNew = url_open +"/api/v1/advert/list";
     public static final String click_url = url_click +"/api/v1/advert/redirect/";
-    public static final String click_url_landing = url_click +"/api/v1/advert/landing/";
+//    public static final String click_url_landing = url_click +"/api/v1/advert/landing/";
+    public static final String click_url_up = url_click +"/api/v1/advert/click/";
     public static final String profit_url = url_open +"/api/v1/park/profit/";
 
     public static final String login_url = url_post + "/api-user/user/login";
@@ -47,7 +45,7 @@ public class DataTest {
     public static final String name = "ZYL流量主Auto" + current; //用户名称            *****不能重复*****
     public static final String contactMobile ="188" + current.substring( 2,10 ); //联系电话  *****不能重复*****
     public static final String regType = "1"; //注册类型
-    public static final String cityId = CityIdEnum.TAIYUAN.getCode(); //所在城市
+    public static final String cityId = CityIdEnum.BEIJING.getCode(); //所在城市
     public static final String accountType ="0"; //客户类型？？？？0:车场; 1:媒介; 3:代理商  ？？？
     public static final String contactName ="风先生"; //联系人
     public static final String source ="商务谈判"; //客户来源
@@ -58,7 +56,7 @@ public class DataTest {
     public static final String password ="88888888";
 
     //车场信息及广告位
-    public static final String parkName = "MY车场Auto" + current; // 车场名称 *****不能重复*****
+    public static final String parkName = "ZYL车场Auto" + current; // 车场名称 *****不能重复*****
     public static final String updateparkName = "测试专用-更新停车场"+ current;
     public static final String parkCityId ="010"; //车场所在城市
 //    static String cityId = "010";

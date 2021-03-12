@@ -22,13 +22,13 @@ public class OpenClick_advertiseName_post {
 
     static int open_cnt = 1;
     static int click_cnt = 1;
-    static String adId = "78167032007327744";//点击的时候传，曝光不需要该字段
+    static String adId = "617-132862520237068288";//点击的时候传，曝光不需要该字段
     @DataProvider(name = "data")
     public static Object[][] dataPro() {
         return new Object[][]
 //                流量主名称,车场名称，广告位id，媒体类型(1-公众号；2-小程序)
-//                {{"ZYL20200630658","ZYL20200707001车场2","3","1"}};
-                {{"ZYL流量主Auto1021153856","MY车场Auto1022104100","2","2"}};
+                {{"ZYL流量主Auto0129140042","ZYL车场Auto0129140105","2","1"}};
+//                {{"ZYL流量主Auto1609986233275","ZYL车场Auto1609986236752","3","1"}};
     }
     @Test(dataProvider = "data")
     public static void openClick_advertiseName(String traffic_name,String parking_name,String adPosId,String medium) throws Exception {
@@ -47,12 +47,12 @@ public class OpenClick_advertiseName_post {
 //        曝光点击
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
-               String result=  exposure_POSTNew(park_Id, partnerId, private_key, adPosId,medium);
+//               String result=  exposure_POSTNew(park_Id, partnerId, private_key, adPosId,medium);
                 if (click_cnt-- > 0 && adId != null) {
                     //                    非小程序
 //                    click(DataTest.click_url,adId, park_Id, partnerId, private_key);
-//                    小程序
-//                    click(DataTest.click_url_landing,adId, park_Id, partnerId, private_key);
+////                    小程序上报点击
+                    click(DataTest.click_url_up,adId, park_Id, partnerId, private_key);
                 }
             }
         } catch (NullPointerException e) {

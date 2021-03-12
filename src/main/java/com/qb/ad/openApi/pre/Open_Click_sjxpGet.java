@@ -18,7 +18,7 @@ public class Open_Click_sjxpGet {
 
 //    static String park_Id = "010202008182005";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
 //    文字链接
-    static String park_Id = "010202008133253";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
+    static String park_Id = "010202008182005";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
 //    bannner
 //    static String park_Id = "010202008186558";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
     static int open_cnt  = 1;
@@ -32,15 +32,14 @@ public class Open_Click_sjxpGet {
 
         try {
             for (int tmp1 = 0;tmp1 < open_cnt;tmp1++){
-//                result_map = exposure(park_Id , DataPre.partnerId ,DataPre.priv_key , adPosId,mediumType);
                 result_map = exposure_sjxpGet(park_Id , DataPre.partnerId ,DataPre.priv_key );
                 adId = result_map.get( "adId" );
 //                非小程序
                 url = result_map.get( "url" )+ "/api/v1/advert/redirect/";
 //                小程序
-//                url = result_map.get( "url" )+ "/api/v1/advert/landing/";
+//                url = result_map.get( "url" )+ "/aapi/v1/advert/click/";
                 if(click_cnt-- > 0 && adId != null){
-                    click( url ,adId ,park_Id , DataPre.partnerId ,DataPre.priv_key);
+//                    click( url ,adId ,park_Id , DataPre.partnerId ,DataPre.priv_key);
                 }
             }
         }catch (NullPointerException e){

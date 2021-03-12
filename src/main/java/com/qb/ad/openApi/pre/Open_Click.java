@@ -15,15 +15,15 @@ import static com.qb.ad.util.ApiUtilsPre.*;
  */
 
 public class Open_Click {
-    static String adPosId = "5";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
+    static String adPosId = "1";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
 
 //    static String park_Id = "010202008182005";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
 //    文字链接
-    static String park_Id = "010202008182005";  //3  测试专用-更新停车场0813172229  4   预发测试专用-更新停车场0818142058
+    static String park_Id = "010202008133253";  //3  测试专用-更新停车场0813172229  4   预发测试专用-更新停车场0818142058
 //    bannner
 //    static String park_Id = "010202008186558";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
-    static int open_cnt  = 10;
-    static int click_cnt = 10;
+    static int open_cnt  = 1;
+    static int click_cnt = 1;
     static Map<String, String> result_map;
     static String adId ="";//65437254218907648
     static String url ="";
@@ -37,10 +37,10 @@ public class Open_Click {
                 adId = result_map.get( "adId" );
 //                非小程序
                 url = result_map.get( "url" )+ "/api/v1/advert/redirect/";
-//                小程序
-//                url = result_map.get( "url" )+ "/api/v1/advert/landing/";
+//                小程序广告上报点击
+//                url = result_map.get( "url" )+ "/api/v1/advert/click/";
                 if(click_cnt-- > 0 && adId != null){
-                    click( url ,adId ,park_Id , DataPre.partnerId ,DataPre.priv_key);
+//                    click( url ,adId ,park_Id , DataPre.partnerId ,DataPre.priv_key);
                 }
             }
         }catch (NullPointerException e){

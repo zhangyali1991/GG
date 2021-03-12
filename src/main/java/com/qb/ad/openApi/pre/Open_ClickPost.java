@@ -39,7 +39,7 @@ public class Open_ClickPost {
 //                非小程序
                 url = result_map.get("url") + "/api/v1/advert/redirect/";
 //                小程序
-//                url = result_map.get( "url" )+ "/api/v1/advert/landing/";
+//                url = result_map.get( "url" )+ "/api/v1/advert/click/";
                 if (click_cnt-- > 0 && adId != null) {
                     click(url, adId, park_Id, DataPre.partnerId, DataPre.priv_key);
                 }

@@ -15,7 +15,7 @@ import static com.qb.ad.util.ApiUtilsPro.*;
  */
 
 public class Open_Click {
-    static String adPosId = "3";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
+    static String adPosId = "2";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
     static String park_Id = "010202008182630";  //监控：010202007219736   010202007217849 010202008182630
     static int open_cnt  = 1;
     static int click_cnt = 1;
@@ -34,7 +34,7 @@ public class Open_Click {
 //                非小程序
                 url = result_map.get( "url" ) + "/api/v1/advert/redirect/";
                 if(click_cnt-- > 0 && adId != null){
-                    click( url ,adId ,park_Id , DataProduct.partnerId ,DataProduct.priv_key);
+//                    click( url ,adId ,park_Id , DataProduct.partnerId ,DataProduct.priv_key);
                 }
             }
         }catch (NullPointerException e){

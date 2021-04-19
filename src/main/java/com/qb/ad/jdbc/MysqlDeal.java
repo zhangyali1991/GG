@@ -55,8 +55,6 @@ public class MysqlDeal {
         try {
             connection = JdbcUtils.getConnection();
             statement = connection.createStatement();
-//            String sql2 = "SELECT * FROM pos_terminal_info WHERE terminal_no ='" + sql + "'";
-//             sql = "SELECT serial_number,traffic_id FROM parking_info WHERE id IN (SELECT parking_id from ad_location_strategy WHERE ad_id=(SELECT id from ad_info WHERE name='孵化拆分广告主001202007_00'))";
             System.out.println(sql);
             rs = statement.executeQuery(sql);
             String values = "";

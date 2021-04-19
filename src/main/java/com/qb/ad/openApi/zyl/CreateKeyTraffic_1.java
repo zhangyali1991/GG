@@ -37,7 +37,8 @@ public class CreateKeyTraffic_1 {
         System.out.println("pub_key_value: " + pub_key_value);
 
         //插入密钥到数据库
-        String insert_sql = "INSERT INTO traffic_info (traffic_name,entity_type,type,client_type ,city_id ,parking_cnt ,parking_on_cnt ,contact_id,manager_name,operator_id,partner_id ,user_id,public_key ,private_key ,source ,comment ,status ,whitelisted,profit_share ,json_str,create_time ,update_time) VALUES ('', '1', '1', '0', '0', '0', '0', '90', 'my测试', '1', '', '89', '" + pub_key_value + "' , '" + priv_key_value + "'," + " '内推', 'my测试', '3', '0', '0', '{}', NOW(), NOW())";
+        String insert_sql = "INSERT INTO traffic_info (traffic_name,entity_type,type,client_type ,city_id ,parking_cnt ,parking_on_cnt ,contact_id,manager_name,operator_id,partner_id ,user_id,public_key ,private_key ,source ,comment ,status ,whitelisted,profit_share ,json_str,create_time ,update_time,account_id,user_status) " +
+                                               "VALUES ('','1', '1', '0', '0', '0', '0', '90', 'my测试', '1', '', '89', '" + pub_key_value + "' , '" + priv_key_value + "'," + " '内推', 'my测试', '3', '0', '0', '{}', NOW(), NOW(),0,'1')";
         System.out.print("insert_sql: " + insert_sql);
         MysqlDeal.mysqlExecute(insert_sql);
 

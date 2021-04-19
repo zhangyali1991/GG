@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static com.qb.ad.util.ApiUtilsTest.*;
 
-/**
+/**======商家小票曝光接口=======
  * 根据车场名称、流量主名称获取对应的partnerId和private_key和park_Id
  * 获取广告---曝光和点击
  * 无媒体类型,返回一个计划(代码默认媒体是微信公众号)
@@ -48,7 +48,7 @@ public class OpenClick_sjxp_get {
 //        曝光、点击
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
-                adId = exposure_sjxp_get(park_Id, partnerId, private_key);
+                exposure_sjxp_get(park_Id, partnerId, private_key);
                 if (click_cnt-- > 0 && adId != null) {
                     //                    非小程序
                     adId = "93292398237507584";//指定点击某个广告

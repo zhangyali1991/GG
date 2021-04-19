@@ -257,7 +257,7 @@ public class ApiUtilsPro {
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
 
         try {
-            responseData = doGet02(DataProduct.exposure_url_new ,exposure_json);
+            responseData = doGet02(DataProduct.exposure_url_sjxp ,exposure_json);
         }catch (Exception e){
             System.out.println(e);
         }
@@ -330,6 +330,26 @@ public class ApiUtilsPro {
         try {
             doGet02(url + click_params , click_json);
         }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+    public static void click_POST(String adId, String park_Id, String partnerId, String private_key) throws Exception {
+        String openId = randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map<String, String> clickMap = new HashMap<>();
+        clickMap.put("adId", adId);
+        clickMap.put("parkId", park_Id);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataProduct.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+        try {
+            doPost2(DataProduct.click_url_up, click_json, click_json);
+        } catch (Exception e) {
             System.out.println(e);
         }
 

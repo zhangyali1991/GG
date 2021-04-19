@@ -15,7 +15,7 @@ import static com.qb.ad.util.ApiUtilsPre.*;
  */
 
 public class Open_Click {
-    static String adPosId = "1";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
+    static String adPosId = "3";//1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功  *****需要创建计划类型*****
 
 //    static String park_Id = "010202008182005";  //这个park_Id 一定要修改为希望点击的车场010202008133253 010202008187576
 //    文字链接

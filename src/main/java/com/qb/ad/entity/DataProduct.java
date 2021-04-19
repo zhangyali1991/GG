@@ -25,8 +25,11 @@ public class DataProduct {
     public static final String adPos_url_3 = url_open_pro +"/api/v3/advert-pos";
     public static final String exposure_url = url_open_pro +"/api/v1/advert";
     public static final String exposure_url_new = url_open_pro +"/api/v1/advert/list";
+    public static final String exposure_url_sjxp = url_open_pro +"/api/v1/advert/ticket";
     public static final String click_url = url_open_pro +"/api/v1/advert/redirect/";
+    public static final String click_url_up = url_open_pro +"/api/v1/advert/click/";
     public static final String profit_url_pro = url_open_pro +"/api/v1/park/profit/";
+
 
     public static final String login_url = url_post_pro + "/api-user/user/login";
     public static final String traffic_update_url = url_post_pro + "/api-post/traffic/update";

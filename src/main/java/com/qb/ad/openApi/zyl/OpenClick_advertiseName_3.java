@@ -53,7 +53,7 @@ public class OpenClick_advertiseName_3 {
                 if (click_cnt-- > 0 && adId != null) {
                     //                    非小程序
 //                    adId="78796845277548544";//指定点击某个广告
-//                    click(DataTest.click_url,adId, park_Id, partnerId, private_key);
+                    click(DataTest.click_url,adId, park_Id, partnerId, private_key);
 //                    小程序
                     click(DataTest.click_url_up,adId, park_Id, partnerId, private_key);
                 }

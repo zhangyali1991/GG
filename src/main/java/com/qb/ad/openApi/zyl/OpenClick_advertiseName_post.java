@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 import java.net.UnknownHostException;
 import java.util.Map;
 
-import static com.qb.ad.util.ApiUtilsTest.click;
-import static com.qb.ad.util.ApiUtilsTest.exposure_POSTNew;
+import static com.qb.ad.util.ApiUtilsTest.*;
 
 /**
  * 获取广告---曝光和点击
@@ -22,12 +21,12 @@ public class OpenClick_advertiseName_post {
 
     static int open_cnt = 1;
     static int click_cnt = 1;
-    static String adId = "617-132862520237068288";//点击的时候传，曝光不需要该字段
+    static String adId = "467-91927408700067840";//点击的时候传，曝光不需要该字段
     @DataProvider(name = "data")
     public static Object[][] dataPro() {
         return new Object[][]
 //                流量主名称,车场名称，广告位id，媒体类型(1-公众号；2-小程序)
-                {{"ZYL流量主Auto0129140042","ZYL车场Auto0129140105","2","1"}};
+                {{"ZYL流量主Auto1119113247","MY车场Auto1119155342","5","4"}};
 //                {{"ZYL流量主Auto1609986233275","ZYL车场Auto1609986236752","3","1"}};
     }
     @Test(dataProvider = "data")
@@ -47,13 +46,13 @@ public class OpenClick_advertiseName_post {
 //        曝光点击
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
-//               String result=  exposure_POSTNew(park_Id, partnerId, private_key, adPosId,medium);
-                if (click_cnt-- > 0 && adId != null) {
-                    //                    非小程序
-//                    click(DataTest.click_url,adId, park_Id, partnerId, private_key);
-////                    小程序上报点击
-                    click(DataTest.click_url_up,adId, park_Id, partnerId, private_key);
-                }
+               String result=  exposure_POSTNew(park_Id, partnerId, private_key, adPosId,medium);
+//                if (click_cnt-- > 0 && adId != null) {
+////                                        非小程序
+                    click(DataTest.click_url,adId, park_Id, partnerId, private_key);
+//////                    小程序上报点击
+//                    click_POST(adId,park_Id, partnerId,private_key);
+//                }
             }
         } catch (NullPointerException e) {
             System.out.println("曝光失败，空指针异常！");

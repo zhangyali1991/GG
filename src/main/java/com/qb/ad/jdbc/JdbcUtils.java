@@ -21,6 +21,7 @@ public class JdbcUtils {
     private static final String URL = "jdbc:mysql://172.17.15.161:3306/adpost";
     private static final String USER = "appuser";
     private static final String PWD = "qianbao123456";
+
 //    private static final String DRIVER = "com.mysql.cj.jdbc.Driver"; //8.0以上
 
     /**

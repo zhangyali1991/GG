@@ -19,15 +19,15 @@ import static com.qb.ad.util.ApiUtilsTest.*;
 public class OpenClick_advertiseName_get {
 
 
-    static int open_cnt = 10;
-    static int click_cnt = 10;
-    static String adId = "127454094598131712";//点击的时候传，曝光不需要该字段46676470335119360
+    static int open_cnt = 5;
+    static int click_cnt = 5;
+    static String adId = "621-142985541173968896";//点击的时候传，曝光不需要该字段576-131710860114563072
     @DataProvider(name = "data")
     public static Object[][] dataPro() {
         return new Object[][]
 //                流量主名称,车场名称，广告位id，媒体类型(1-公众号；2-小程序;4-支付宝;3-app)
-//                {{"ZYL流量主Auto1021153856","MY车场Auto1022104100","3","4"}};
-                {{"ZYL流量主Auto0129135716","ZYL车场Auto0129135734","3","1"}};
+                {{"ZYL流量主Auto1119113247","ZYL车场Auto0409132707","1","1"}};
+//                {{"ZYL流量主Auto0129140042","ZYL车场Auto0129140105","3","1"}};
     }
     @Test(dataProvider = "data")
     public static void openClick_advertiseName(String traffic_name,String parking_name,String adPosId,String medium) throws Exception {
@@ -47,12 +47,12 @@ public class OpenClick_advertiseName_get {
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
 //               String result=  exposure_GetNew(park_Id, partnerId, private_key, adPosId,medium);
-                if (click_cnt-- > 0 && adId != null) {
-                    //                    非小程序
+//                if (click_cnt-- > 0 && adId != null) {
+//                    //                    非小程序
                     click(DataTest.click_url,adId, park_Id, partnerId, private_key);
-//                    小程序
-                    click(DataTest.click_url_up,adId, park_Id, partnerId, private_key);
-                }
+//////                    小程序
+//                    click_POST(adId,park_Id, partnerId,private_key);
+//                }
             }
         } catch (NullPointerException e) {
             System.out.println("曝光失败，空指针异常！");

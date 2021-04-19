@@ -23,8 +23,7 @@ public class Login {
         Map<String, Object> resultMap = JSON.parseObject( response, Map.class );
 
         String result = resultMap.get( "result" ).toString();
-        Map<String, String> result_map = JSONObject.parseObject( result, new TypeReference<Map<String, String>>() {
-        } );
+        Map<String, String> result_map = JSONObject.parseObject( result, Map.class);
         String token = result_map.get( "token" );
         System.out.println( "token ： " + token );
     }

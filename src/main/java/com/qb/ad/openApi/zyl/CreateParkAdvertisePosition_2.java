@@ -18,10 +18,10 @@ public class CreateParkAdvertisePosition_2 {
 //    static String url = DataTest.adPos_url;
 //    static String url = DataTest.adPos_url_1;
     static String traffic_name = "ZYL流量主Auto1119113247"; // 需要新增车场广告位的流量主  运营管理-流量主列表
-    static String cityId = CityIdEnum.TAIYUAN.getCode();
-//    static String cityId = CityIdEnumOld.TAIYUAN.getCode();
+//    static String cityId = CityIdEnum.BEIJING.getCode();
+    static String cityId = DataTest.cityId;
     static String adPosIds = "1#2#3#4#5";//1#2#3#4#5  1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功
-    static String medium = "1,2,4";//1:微信公众号 2:微信小程序 3:app
+    static String medium = "1#2#4";//1:微信公众号 2:微信小程序 3:app 4:支付宝
 
     @org.testng.annotations.Test
     public static void createParkAdvertisePosition() throws Exception {
@@ -36,7 +36,7 @@ public class CreateParkAdvertisePosition_2 {
 
         //创建车场——根据traffic_name创建车场
         String parkId = createPark(partnerId, private_key);
-//        String parkId1 = createPark( partnerId, private_key );
+//        String parkId = "140100202101077454";
 //        新增或更新车场
 //        updatePark(parkId, partnerId, private_key );
 //        获取车场
@@ -45,10 +45,10 @@ public class CreateParkAdvertisePosition_2 {
 //        String parkId="010202010214097";
 //        createAdvertisePosition_v1(adPosIds, parkId , partnerId , private_key );
 //        新增广告位v2版本
-//        createAdvertisePosition_v2(adPosIds, parkId , partnerId , private_key );
+        createAdvertisePosition_v2(adPosIds, parkId , partnerId , private_key );
 //        新增广告位v3版本,新增mediumType版本
 //        String parkId="010202010218348";
-        createAdvertisePosition_v3(adPosIds, parkId, partnerId, private_key, medium);
+//        createAdvertisePosition_v3(adPosIds, parkId, partnerId, private_key, medium);
 //                更新广告位v1
 //        createAdvertisePosition_v1("1#2#3#4#5", parkId , partnerId , private_key);
 //        更新广告位v2

@@ -290,9 +290,9 @@ public class ApiUtilsPre {
     public static String exposure_new(String park_Id ,String partnerId ,String private_key ,String adPosId,String medium) throws Exception{
 //        String userLicense = "京A" + randomNumeric(5);
         String openId =  randomNumeric(8);
-//        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
+        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
         String userLicense = "_" ;
-        String userIp = "_";
+//        String userIp = "_";
         String responseData = "";
         Map <String, String> getAdvertMap = new HashMap <>();
         getAdvertMap.put("parkId", park_Id);
@@ -386,6 +386,26 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
         try {
             doGet02(url + click_params , click_json);
         }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+    public static void click_POST(String adId, String park_Id, String partnerId, String private_key) throws Exception {
+        String openId = randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map<String, String> clickMap = new HashMap<>();
+        clickMap.put("adId", adId);
+        clickMap.put("parkId", park_Id);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataPre.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+        try {
+            doPost2(DataPre.click_url_up, click_json, click_json);
+        } catch (Exception e) {
             System.out.println(e);
         }
 

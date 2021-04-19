@@ -11,8 +11,8 @@ import static com.qb.ad.util.ApiUtilsPre.*;
  */
 public class Park_AdvertisePosition {
 
-    static String medium = "1,2,4,3";//1:微信公众号 2:微信小程序 3:app
-    static String adPosIds = "1#2#3#4#5";//1#2#3#4#5  1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功
+    static String medium = "1,2";//1:微信公众号 2:微信小程序 3:app
+    static String adPosIds = "3";//1#2#3#4#5  1入场推送，2出场推送，3输入车牌 ，4支付页面，5付款成功
 
     @org.testng.annotations.Test
     public static void park_advertisePosition() throws Exception {
@@ -31,13 +31,13 @@ public class Park_AdvertisePosition {
 //        getPark(parkId, DataPre.partnerId);//支持v1 v2系统异常
         System.out.println("========获取车场结束=======");
         //新增广告位V1
-        createAdvertisePosition_v1("1#4", parkId, DataPre.partnerId, DataPre.priv_key);
+        createAdvertisePosition_v1("3", parkId, DataPre.partnerId, DataPre.priv_key);
         //新增广告位V2
-        createAdvertisePosition_v2("2#3", parkId, DataPre.partnerId, DataPre.priv_key);
+//        createAdvertisePosition_v2(adPosIds, parkId, DataPre.partnerId, DataPre.priv_key);
 
         //新增广告位V3
         System.out.println("========新增广告位开始=======");
-        createAdvertisePosition("5", parkId, DataPre.partnerId, DataPre.priv_key,medium); //v1必须填status
+//        createAdvertisePosition("3", parkId, DataPre.partnerId, DataPre.priv_key,medium); //v1必须填status
         System.out.println("========新增广告位结束=======");
         //更新广告位
         System.out.println("========更新广告位开始=======");

@@ -398,39 +398,7 @@ public class ApiUtilsTest {
             return null;
         }
     }
-//  增加场景曝光接口
-    public static String exposureSceneGet(String gridId, String partnerId, String private_key, String adPosId, String medium) throws Exception {
-        String userLicense = "京A" + randomNumeric(5);
-        String openId = randomNumeric(8);
-        String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
-        String responseData = "";
-        Map<String, String> getAdvertMap = new HashMap<>();
-        getAdvertMap.put("gridId", gridId);
-        getAdvertMap.put("partnerId", partnerId);
-        getAdvertMap.put("adPosId", adPosId);
-        getAdvertMap.put("userMobile", "188" + randomNumeric(7));
-        getAdvertMap.put("userLicense", userLicense);
-        getAdvertMap.put("openId", openId);
-        getAdvertMap.put("userIp", userIp);
-        getAdvertMap.put("medium", medium);
-        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
-        getAdvertMap.put("sign", exposure_sign);
-        String exposure_json = JSONObject.toJSONString(getAdvertMap);
-        try {
-            responseData = doGet02(DataTest.exposure_url_scene, exposure_json);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
 
-        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
-        if (resultMap.get("status").equals("20000000")) {
-            String result = resultMap.get("result").toString();
-            return result;
-        } else {
-            System.out.println("曝光失败！");
-            return null;
-        }
-    }
     //    商家小票曝光无场景POST
     public static String exposure_sjxp_POST(String park_Id, String partnerId, String private_key) throws Exception {
         String  responseData ="";

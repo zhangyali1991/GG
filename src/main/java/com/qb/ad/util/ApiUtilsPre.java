@@ -286,6 +286,41 @@ public class ApiUtilsPre {
             return null;
         }
     }
+
+    //post曝光（场景)
+    public static Map<String, String> exposure_sjxpScenePost(String gridId ,String partnerId ,String private_key) throws Exception{
+        String userLicense = "京A" + randomNumeric(5);
+        String openId =  randomNumeric(8);
+        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
+        String responseData = "";
+        Map <String, String> getAdvertMap = new HashMap <>();
+        getAdvertMap.put("gridId", gridId);
+        getAdvertMap.put("partnerId", partnerId);
+        getAdvertMap.put("userMobile", DataPre.userMobile);
+        getAdvertMap.put("userLicense", userLicense);
+        getAdvertMap.put("openId", openId);
+        getAdvertMap.put("userIp", userIp);
+        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
+        getAdvertMap.put("sign", exposure_sign);
+        String exposure_json = JSONObject.toJSONString(getAdvertMap);
+        try {
+            responseData = doPost(DataPre.exposure_sjxp_scene,exposure_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
+        if(resultMap.get( "status" ).equals( "20000000" )){
+            String result = resultMap.get( "result" ).toString();
+            Map<String, String> result_map = JSONObject.parseObject(result, new TypeReference<Map<String, String>>(){});
+            String adId = result_map.get( "adId" ).toString();
+            System.out.println("广告计划uuid - adId: " + adId);
+            return  result_map;
+        }else {
+            System.out.println("曝光失败！");
+            return null;
+        }
+    }
     //    get请求曝光传媒体类型
     public static String exposure_new(String park_Id ,String partnerId ,String private_key ,String adPosId,String medium) throws Exception{
 //        String userLicense = "京A" + randomNumeric(5);
@@ -328,6 +363,7 @@ public class ApiUtilsPre {
             return null;
         }
     }
+
 //    曝光post请求，传媒体类型
 public static Map<String, String> exposure_post(String park_Id ,String partnerId ,String private_key ,String adPosId,String medium) throws Exception{
     String userLicense = "京A" + randomNumeric(5);
@@ -364,6 +400,64 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
         return null;
     }
 }
+    //    曝光post请求，传场景
+    public static Map<String, String> exposure_scene(String gridId ,String partnerId ,String private_key ,String adPosId,String medium) throws Exception{
+        String userLicense = "京A" + randomNumeric(5);
+        String openId =  randomNumeric(8);
+        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
+        String responseData = "";
+        Map <String, String> getAdvertMap = new HashMap <>();
+        getAdvertMap.put("gridId", gridId);
+        getAdvertMap.put("partnerId", partnerId);
+        getAdvertMap.put("adPosId", adPosId);
+        getAdvertMap.put("userMobile", DataPre.userMobile);
+        getAdvertMap.put("userLicense", userLicense);
+        getAdvertMap.put("openId", openId);
+        getAdvertMap.put("userIp", userIp);
+        getAdvertMap.put("medium",medium);
+        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
+        getAdvertMap.put("sign", exposure_sign);
+        String exposure_json = JSONObject.toJSONString(getAdvertMap);
+        try {
+            responseData = doPost(DataPre.exposure_url_scene,exposure_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
+        if(resultMap.get( "status" ).equals( "20000000" )){
+            String result = resultMap.get( "result" ).toString();
+            Map<String, String> result_map = JSONObject.parseObject(result, new TypeReference<Map<String, String>>(){});
+            String adId = result_map.get( "adId" ).toString();
+            System.out.println("广告计划uuid - adId: " + adId);
+            return  result_map;
+        }else {
+            System.out.println("曝光失败！");
+            return null;
+        }
+    }
+    //点击click(场景）
+    public static void clickScene(String adId ,String gridId ,String partnerId,String private_key) throws Exception{
+        String openId =  randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map <String, String> clickMap = new HashMap <>();
+        clickMap.put("adId", adId);
+        clickMap.put("gridId", gridId);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataPre.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" +"openId="+openId+ "&" + "userMobile=" + DataPre.userMobile +"&"+ "userLicense"+userLicense+"sign=" + click_sign;
+        try {
+            doGet02(DataPre.clickScene_url + click_params , click_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
     //点击click
     public static void click(String url,String adId ,String park_Id ,String partnerId,String private_key) throws Exception{
         String openId =  randomNumeric(8);
@@ -385,6 +479,29 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
 //        click_params = "?adId=47856525083975680&partnerId=1462510737&parkId=010202007219736&openId=24889746&userMobile=1885577077&sign=MEUCID0HY2OItpSJ+/P0Gg73YuprQRHaDWgfJWnolcrA23m+AiEAvwP0lUlxRfdWo/vH4LBMOyS+pVPOghxRWDYAWJT7/HA=";
         try {
             doGet02(url + click_params , click_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+    //点击click（场景）
+    public static void clickUpScene(String adId ,String gridId ,String partnerId,String private_key) throws Exception{
+        String openId =  randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map <String, String> clickMap = new HashMap <>();
+        clickMap.put("adId", adId);
+        clickMap.put("gridId", gridId);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataPre.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" +"openId="+openId+ "&" + "userMobile=" + DataPre.userMobile +"&"+ "userLicense"+userLicense+"sign=" + click_sign;
+        System.out.println();
+        try {
+            doGet02( DataPre.clickUpScene_url+ click_params , click_json);
         }catch (Exception e){
             System.out.println(e);
         }

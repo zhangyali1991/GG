@@ -25,8 +25,12 @@ public class DataPre {
     public static final String adPos_url_3 = url_open_pre +"/api/v3/advert-pos";
     public static final String exposure_url = url_open_pre +"/api/v1/advert";
     public static final String exposure_sjxp_url = url_open_pre +"/api/v1/advert/ticket";
+    public static final String exposure_sjxp_scene = url_open_pre +"/api/v1/grid-advert/ticket";
     public static final String exposure_url_new = url_open_pre +"/api/v1/advert/list";
+    public static final String exposure_url_scene = url_open_pre +"/api/v1/grid-advert/list/";
     public static final String click_url = url_click_pre +"/api/v1/advert/redirect/";
+    public static final String clickScene_url = url_click_pre +"/api/v1/grid-advert/redirect/";
+    public static final String clickUpScene_url = url_click_pre +"/api/v1/grid-advert/click/";
     public static final String click_url_up = url_click_pre +"/api/v1/advert/click/";
     public static final String park_data_url = url_open_pre +"/api/v1/vehicle/data";
     public static final String profit_url_pre = url_open_pre +"/api/v1/park/profit/";

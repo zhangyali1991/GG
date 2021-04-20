@@ -45,10 +45,6 @@ public class GetAdListScene {
         Map<String, String> map1 = MysqlDeal.mysqlDeal(select_sql_2, str2);
         String gridId = map1.get("serial_number").split("-")[1];
         for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
-/*===需要用哪个接口就打开哪个接口=======*/
-//       曝光Get请求
-//            String result_get = ApiUtilsTest.exposureSceneGet(gridId, partnerId, privateKey, adPosId, medium);
-
 //       曝光POS请求
 //            String result_post = ApiUtilsTest.exposureScenePost(gridId, partnerId, privateKey, adPosId, medium);
 //       广告点击跳转

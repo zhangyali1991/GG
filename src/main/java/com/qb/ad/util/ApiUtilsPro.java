@@ -240,6 +240,39 @@ public class ApiUtilsPro {
             return "";
         }
     }
+    public static String exposureScene(String gridId ,String partnerId ,String private_key ,String adPosId,String medium) throws Exception{
+        String userLicense = "京A" + randomNumeric(5);
+        String openId =  randomNumeric(8);
+        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
+        String responseData = "";
+        Map <String, String> getAdvertMap = new HashMap <>();
+        getAdvertMap.put("gridId", gridId);
+        getAdvertMap.put("partnerId", partnerId);
+        getAdvertMap.put("adPosId", adPosId);
+        getAdvertMap.put("userMobile", DataProduct.userMobile);
+        getAdvertMap.put("userLicense", userLicense);
+        getAdvertMap.put("openId", openId);
+        getAdvertMap.put("userIp", userIp);
+        getAdvertMap.put("medium", medium);
+        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
+        getAdvertMap.put("sign", exposure_sign);
+        String exposure_json = JSONObject.toJSONString(getAdvertMap);
+
+        try {
+            responseData = doPost(DataProduct.exposure_url_scene ,exposure_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
+        if(resultMap.get( "status" ).equals( "20000000" )){
+            String result = resultMap.get( "result" ).toString();
+            return responseData ;
+        }else {
+            System.out.println("曝光失败！");
+            return "";
+        }
+    }
     public static String exposure_sjxp(String park_Id ,String partnerId ,String private_key) throws Exception{
         String userLicense = "京A" + randomNumeric(5);
         String openId =  randomNumeric(8);
@@ -258,6 +291,37 @@ public class ApiUtilsPro {
 
         try {
             responseData = doGet02(DataProduct.exposure_url_sjxp ,exposure_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
+        if(resultMap.get( "status" ).equals( "20000000" )){
+            String result = resultMap.get( "result" ).toString();
+            return responseData ;
+        }else {
+            System.out.println("曝光失败！");
+            return "";
+        }
+    }
+    public static String exposureScene_sjxp(String gridId ,String partnerId ,String private_key) throws Exception{
+        String userLicense = "京A" + randomNumeric(5);
+        String openId =  randomNumeric(8);
+        String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
+        String responseData = "";
+        Map <String, String> getAdvertMap = new HashMap <>();
+        getAdvertMap.put("gridId", gridId);
+        getAdvertMap.put("partnerId", partnerId);
+        getAdvertMap.put("userMobile", DataProduct.userMobile);
+        getAdvertMap.put("userLicense", userLicense);
+        getAdvertMap.put("openId", openId);
+        getAdvertMap.put("userIp", userIp);
+        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
+        getAdvertMap.put("sign", exposure_sign);
+        String exposure_json = JSONObject.toJSONString(getAdvertMap);
+
+        try {
+            responseData = doPost(DataProduct.exposureScene_url_sjxp ,exposure_json);
         }catch (Exception e){
             System.out.println(e);
         }
@@ -334,6 +398,29 @@ public class ApiUtilsPro {
         }
 
     }
+    //点击click
+    public static void clickScene(String adId ,String gridId ,String partnerId,String private_key) throws Exception{
+        String openId =  randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map <String, String> clickMap = new HashMap <>();
+        clickMap.put("adId", adId);
+        clickMap.put("gridId", gridId);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataProduct.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+
+        try {
+            doPost( DataProduct.clickScene_url, click_json);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
     public static void click_POST(String adId, String park_Id, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "川A" + randomNumeric(5);
@@ -354,6 +441,26 @@ public class ApiUtilsPro {
         }
 
     }
+    public static void clickUpScene(String adId, String gridId, String partnerId, String private_key) throws Exception {
+        String openId = randomNumeric(8);
+        String userLicense = "川A" + randomNumeric(5);
+        Map<String, String> clickMap = new HashMap<>();
+        clickMap.put("adId", adId);
+        clickMap.put("gridId", gridId);
+        clickMap.put("partnerId", partnerId);
+        clickMap.put("userMobile", DataProduct.userMobile);
+        clickMap.put("userLicense", userLicense);
+        clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
+        String click_sign = ECCSignUtil.sign(private_key, clickMap);
+        clickMap.put("sign", click_sign);
+        String click_json = JSONObject.toJSONString(clickMap);
+        try {
+            doPost(DataProduct.clickScene_url_up, click_json);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
+    }
 
 }

@@ -42,13 +42,11 @@ public class OPenClick_sjxp_scene {
 //        曝光、点击
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
-//                曝光GET
-//                exposure_sjxp_scene_get(gridId, partnerId, private_key);
-////                曝光POST
-//                exposure_sjxp_scene_Post(gridId, partnerId, private_key);
+//                曝光
+                exposure_sjxp_scene_Post(gridId, partnerId, private_key);
 //
-//                //                    非小程序
-                clickSceneGet(DataTest.click_url_scene, adId, gridId, partnerId, private_key);
+//               点击
+                clickScene(adId, gridId, partnerId, private_key);
 
             }
             } catch(NullPointerException e){

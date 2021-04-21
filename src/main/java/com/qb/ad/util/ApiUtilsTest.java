@@ -25,9 +25,9 @@ import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
  * 后台登录
  */
 public class ApiUtilsTest {
-//   public static String userLicense = "京A" + randomNumeric(5);
-//    public static  String openId = randomNumeric(8);
-//    public static   String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
+   public static String userLicense = "京A" + randomNumeric(5);
+    public static  String openId = randomNumeric(8);
+    public static   String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
 
     //生成流量主账户
     public static String createAccount(String public_key, String private_key) throws Exception {
@@ -451,7 +451,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
         try {
-            responseData = doPost2(DataTest.exposure_sjxp_scene, exposure_json, exposure_json);
+            responseData = doPost(DataTest.exposure_sjxp_scene, exposure_json);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -500,37 +500,6 @@ public class ApiUtilsTest {
             return null;
         }
     }
-//    商家小票场景曝光get
-    public static String exposure_sjxp_scene_get(String gridId, String partnerId, String private_key) throws Exception {
-        String userLicense = "京A" + randomNumeric(5);
-        String openId = randomNumeric(8);
-        String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
-        String responseData = "";
-        Map<String, String> getAdvertMap = new HashMap<>();
-        getAdvertMap.put("gridId", gridId);
-        getAdvertMap.put("partnerId", partnerId);
-        getAdvertMap.put("userMobile", DataTest.userMobile);
-        getAdvertMap.put("userLicense", userLicense);
-        getAdvertMap.put("openId", openId);
-        getAdvertMap.put("userIp", userIp);
-        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
-        getAdvertMap.put("sign", exposure_sign);
-        String exposure_json = JSONObject.toJSONString(getAdvertMap);
-        try {
-            responseData = doGet02(DataTest.exposure_sjxp_scene, exposure_json);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
-        if (resultMap.get("status").equals("20000000")) {
-            String result = resultMap.get("result").toString();
-            return result;
-        } else {
-            System.out.println("曝光失败！");
-            return null;
-        }
-    }
     //点击click
     public static void click(String url, String adId, String park_Id, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
@@ -555,7 +524,7 @@ public class ApiUtilsTest {
         }
     }
     //点击click
-    public static void clickSceneGet(String url, String adId, String gridId, String partnerId, String private_key) throws Exception {
+    public static void clickScene( String adId, String gridId, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "京A" + randomNumeric(5);
         String userMobile="188" + randomNumeric(7);
@@ -566,40 +535,19 @@ public class ApiUtilsTest {
         clickMap.put("userMobile", userMobile);
         clickMap.put("userLicense", userLicense);
         clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
         String sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", sign);
         String click_json = JSONObject.toJSONString(clickMap);
-        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile +"&"+"userLicense="+userLicense+ "&" + "sign=" + sign;
         String res = "";
         try {
-            res = doGet02(url + click_params, click_json);
+            res = doPost(DataTest.click_url_scene, click_json);
         } catch (Exception e) {
             System.out.println(e);
         }
     }
-    //点击click【POST请求】
-    public static void clickScenePOST(String adId, String park_Id, String partnerId, String private_key) throws Exception {
-        String openId = randomNumeric(8);
-        String userLicense = "川A" + randomNumeric(5);
-        Map<String, String> clickMap = new HashMap<>();
-        clickMap.put("adId", adId);
-        clickMap.put("parkId", park_Id);
-        clickMap.put("partnerId", partnerId);
-        clickMap.put("userMobile", DataTest.userMobile);
-        clickMap.put("userLicense", userLicense);
-        clickMap.put("openId", openId);
-        String click_sign = ECCSignUtil.sign(private_key, clickMap);
-        clickMap.put("sign", click_sign);
-        String click_json = JSONObject.toJSONString(clickMap);
-        try {
-            doPost2(DataTest.click_url_scene, click_json, click_json);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
 
-    }
-
-    //点击click【POST请求】
+    //点击上报click【场景】
     public static void click_POST(String adId, String park_Id, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "川A" + randomNumeric(5);
@@ -621,7 +569,7 @@ public class ApiUtilsTest {
 
     }
 //    场景小程序上报点击
-    public static void clickScenePost (String adId, String gridId, String partnerId, String private_key) throws Exception {
+    public static void clickUpScene (String adId, String gridId, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "川A" + randomNumeric(5);
         Map<String, String> clickMap = new HashMap<>();
@@ -631,11 +579,12 @@ public class ApiUtilsTest {
         clickMap.put("userMobile", DataTest.userMobile);
         clickMap.put("userLicense", userLicense);
         clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
         String click_sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", click_sign);
         String click_json = JSONObject.toJSONString(clickMap);
         try {
-            doPost2(DataTest.click_scene_up, click_json, click_json);
+            doPost(DataTest.click_scene_up, click_json);
         } catch (Exception e) {
             System.out.println(e);
         }

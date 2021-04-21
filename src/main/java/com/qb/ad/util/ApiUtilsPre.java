@@ -447,12 +447,12 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
         clickMap.put("userMobile", DataPre.userMobile);
         clickMap.put("userLicense", userLicense);
         clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
         String click_sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", click_sign);
         String click_json = JSONObject.toJSONString(clickMap);
-        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" +"openId="+openId+ "&" + "userMobile=" + DataPre.userMobile +"&"+ "userLicense"+userLicense+"sign=" + click_sign;
         try {
-            doGet02(DataPre.clickScene_url + click_params , click_json);
+            doPost(DataPre.clickScene_url , click_json);
         }catch (Exception e){
             System.out.println(e);
         }
@@ -495,13 +495,12 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
         clickMap.put("userMobile", DataPre.userMobile);
         clickMap.put("userLicense", userLicense);
         clickMap.put("openId", openId);
+        clickMap.put("userIp", userIp);
         String click_sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", click_sign);
         String click_json = JSONObject.toJSONString(clickMap);
-        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" +"openId="+openId+ "&" + "userMobile=" + DataPre.userMobile +"&"+ "userLicense"+userLicense+"sign=" + click_sign;
-        System.out.println();
         try {
-            doGet02( DataPre.clickUpScene_url+ click_params , click_json);
+            doPost( DataPre.clickUpScene_url , click_json);
         }catch (Exception e){
             System.out.println(e);
         }

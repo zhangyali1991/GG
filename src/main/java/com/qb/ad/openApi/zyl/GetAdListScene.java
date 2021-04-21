@@ -46,13 +46,13 @@ public class GetAdListScene {
         String gridId = map1.get("serial_number").split("-")[1];
         for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
 //       曝光POS请求
-//            String result_post = ApiUtilsTest.exposureScenePost(gridId, partnerId, privateKey, adPosId, medium);
-//       广告点击跳转
+//             ApiUtilsTest.exposureScenePost(gridId, partnerId, privateKey, adPosId, medium);
+//       点击
 
-            clickScenePOST(adId, gridId, partnerId, privateKey);
+            clickScene(adId, gridId, partnerId, privateKey);
 
-//       小程序广告上报点击
-            clickScenePost(adId,gridId, partnerId,privateKey);
+//       小程序上报点击
+            clickUpScene(adId,gridId, partnerId,privateKey);
         }
 
 

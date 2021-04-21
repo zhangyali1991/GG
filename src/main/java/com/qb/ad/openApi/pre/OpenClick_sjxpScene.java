@@ -28,11 +28,13 @@ public class OpenClick_sjxpScene {
         try {
             for (int tmp1 = 0; tmp1 < open_cnt; tmp1++) {
                 //曝光--获取列表Post请求
-//                result_map = exposure_sjxpScenePost(gridId, DataPre.partnerId, DataPre.priv_key);
+                result_map = exposure_sjxpScenePost(gridId, DataPre.partnerId, DataPre.priv_key);
 
                 if (click_cnt-- > 0 && adId != null) {
                     //点击
                     clickScene( adId , gridId, DataPre.partnerId ,DataPre.priv_key);
+
+
                 }
             }
         } catch (NullPointerException e) {

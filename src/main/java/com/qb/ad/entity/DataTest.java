@@ -15,7 +15,6 @@ public class DataTest {
       public static final String url_inner = "http://api-inner-sit.anbokeji.net:8000";
       public static final String url_open = "http://api-sit.anbokeji.net:8000";
       public static final String url_click = "http://ad-sit.anbokeji.net:8000";
-
     public static final String create_account_url = url_open + "/api/v1/account";
     public static final String park_url_1 = url_open +"/api/v1/park";
     public static final String park_url = url_open +"/api/v2/park";
@@ -34,11 +33,14 @@ public class DataTest {
     public static final String click_url_up = url_click +"/api/v1/advert/click/";
     public static final String click_scene_up = url_click +"/api/v1/grid-advert/click/";
     public static final String profit_url = url_open +"/api/v1/park/profit/";
-
     public static final String login_url = url_post + "/api-user/user/login";
     public static final String traffic_update_url = url_post + "/api-post/traffic/update";
     public static final String traffic_share_url = url_post + "/api-post/traffic/share/update";
     public static final String plan_create_url = url_post + "/api-post/plan/create";
+
+    //****场地场景相关新增url
+    public static final String grid_url = url_open +"/api/v1/grid";//新增场地，更新场地，获取场地信息
+    public static final String adPos_grid_url= url_open +"/api/v1/grid-pos";//开通广告页，获取广告页
 
     //随机数
     public static final SimpleDateFormat formatter = new SimpleDateFormat("MMddHHmmss");
@@ -60,7 +62,9 @@ public class DataTest {
     public static final String password ="88888888";
 
     //车场信息及广告位
-    public static final String parkName = "ZYL车场Auto" + current; // 车场名称 *****不能重复*****
+    public static final String parkName = "ZYL场地Auto" + current; // 车场名称 *****不能重复*****
+    public static final String gridId = "2021场地ID" + current; // 自定义场地id名称 *****不能重复*****
+
     public static final String updateparkName = "测试专用-更新停车场"+ current;
     public static final String parkCityId ="010"; //车场所在城市
 //    static String cityId = "010";

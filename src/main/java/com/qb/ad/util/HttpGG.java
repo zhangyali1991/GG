@@ -54,11 +54,6 @@ public class HttpGG {
         return result;
     }
 
-    public static String doPost3(String url,String requestData,String Access_Token) throws IOException {
-
-        return null;
-    }
-
     public static void doGet(String url) throws IOException{
         HttpClient httpClient = HttpClients.createDefault();
         HttpGet post = new HttpGet(url);

@@ -635,4 +635,104 @@ public class ApiUtilsTest {
         System.out.println("token ： " + token);
         return token;
     }
+
+    //**场景**流量主新增场地
+    public static String createGrid(String partnerId, String private_key, String scene) throws Exception {
+        try {
+            //接口地址：[POST] https://api-test.anbokeji.net/api/v1/grid
+            Map <String, String> sceneMap = new HashMap <>();
+            sceneMap.put("partnerId", partnerId);//流量主ID
+            sceneMap.put("gridId", DataTest.gridId);//自定义场地ID(非必填)
+            sceneMap.put("gridName", DataTest.parkName);//场地名称
+            sceneMap.put("scene", scene);//场地场景
+            sceneMap.put("cityId", DataTest.cityId);//城市ID
+            sceneMap.put("type", "0");//场地类型(非必填)
+            //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
+            sceneMap.put("lng", "东经116°20");//经度(非必填)
+            sceneMap.put("lat", "北纬39°56′");//纬度(非必填)
+            String parkSign = ECCSignUtil.sign(private_key, sceneMap);
+            sceneMap.put("sign", parkSign);
+            String park_json = JSONObject.toJSONString(sceneMap);
+            String requestData = doPost(DataTest.grid_url, park_json);
+            Map <String, Object> resultMap = JSON.parseObject(requestData, Map.class);
+            String result = resultMap.get("result").toString();
+            Map <String, String> result_map = JSONObject.parseObject(result, new TypeReference <Map <String, String>>() {
+            });
+            String gridId = result_map.get("gridId").toString();
+            System.out.println("场地ID gridId: " + gridId);
+            return gridId;
+        } catch (Exception e) {
+            System.out.println("新增场地失败：" + e);
+        }
+        return null;
+    }
+    //**场景**流量主更新场地
+    public static void updateGrid(String gridId, String partnerId, String private_key,String scene) throws Exception {
+        try {
+            //接口地址：[PUT] https://api-test.anbokeji.net/api/v1/grid
+            Map<String, String> sceneMap = new HashMap<>();
+            sceneMap.put("partnerId", partnerId);//流量主ID(必填)
+            sceneMap.put("gridId", gridId);//自定义场地ID(必填)
+            sceneMap.put("gridName", DataTest.parkName);//场地名称
+            sceneMap.put("scene", scene);//场地场景
+            sceneMap.put("cityId", DataTest.cityId);//城市ID
+            sceneMap.put("type", "0");//场地类型
+            //场地类型枚举:0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
+            sceneMap.put("lng", "东经116°20");//经度(非必填)
+            sceneMap.put("lat", "北纬39°56′");//纬度(非必填)
+            String parkSign = ECCSignUtil.sign(private_key, sceneMap);
+            sceneMap.put("sign", parkSign);
+            String park_json = JSONObject.toJSONString(sceneMap);
+            HttpGG.doPut(DataTest.grid_url, park_json);
+        } catch (Exception e) {
+            System.out.println("更新场地失败：" + e);
+        }
+    }
+
+    //**场景**根据场地ID，流量主ID获取场地信息
+    public static void getGrid(String gridId, String partnerId) {
+        //接口地址：[GET] https://api-test.anbokeji.net/api/v1/grid
+        try {
+            Map<String, String> map = new HashMap<>();
+            map.put("gridId", gridId);
+            map.put("partnerId", partnerId);
+            String json = JSONObject.toJSONString(map);
+            System.out.println(json);
+            String params = "?" + "gridId=" + gridId + "&" + "partnerId=" + partnerId;
+            doGet02(DataTest.grid_url + params, json);
+        } catch (Exception e) {
+
+        }
+    }
+    //**场地场景****开通广告页
+    public static void createSceneAdvertisePosition(String adPosIds, String gridId, String partnerId, String private_key) {
+        try {
+            //接口地址：[POST] https://api-test.anbokeji.net/api/v1/grid-pos
+            Map<String, String> adPosMap = new HashMap<>();
+            adPosMap.put("adPosIds", adPosIds);//若是多个广告页ID，则以#分割
+            adPosMap.put("partnerId", partnerId);
+            adPosMap.put("gridId", gridId);
+            String adPosSign = ECCSignUtil.sign(private_key, adPosMap);
+            adPosMap.put("sign", adPosSign);
+            String adPos_json = JSONObject.toJSONString(adPosMap);
+            doPost(DataTest.adPos_grid_url, adPos_json);
+        } catch (Exception e) {
+            System.out.println("新增带场景广告位失败！");
+        }
+    }
+
+    //**场地场景****获取广告页信息
+    public static void getSceneAdvertisePosition(String gridId, String partnerId) {
+        try {//接口地址：[GET] https://api-test.anbokeji.net/api/v1/grid-pos
+            Map<String, String> adPosMap = new HashMap<>();
+            adPosMap.put("gridId", gridId);
+            adPosMap.put("partnerId", partnerId);
+            String json = JSONObject.toJSONString(adPosMap);
+            System.out.println(json);
+            String params = "?" + "gridId=" + gridId + "&" + "partnerId=" + partnerId;
+            doGet02(DataTest.adPos_grid_url + params, json);
+        } catch (Exception e) {
+            System.out.println("获取场景广告位失败！");
+        }
+    }
 }

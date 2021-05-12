@@ -28,7 +28,7 @@ public class DataTest {
     public static final String exposure_url_scene = url_open +"/api/v1/grid-advert/list/";
     public static final String exposure_sjxp_scene = url_open +"/api/v1/grid-advert/ticket/";
     public static final String click_url = url_click +"/api/v1/advert/redirect/";
-    public static final String click_url_scene = url_click +"/api/v1/grid-advert/redirect/";
+    public static final String click_url_scene = url_click +"/api/v1/grid-advert/redirect";
 //    public static final String click_url_landing = url_click +"/api/v1/advert/landing/";
     public static final String click_url_up = url_click +"/api/v1/advert/click/";
     public static final String click_scene_up = url_click +"/api/v1/grid-advert/click/";

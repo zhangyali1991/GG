@@ -452,8 +452,10 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
         String click_sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", click_sign);
         String click_json = JSONObject.toJSONString(clickMap);
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" + "userIp=" + userIp + "&" + "openId=" + openId + "&" + "userMobile=" + DataPre.userMobile +"&"+"userLicense="+userLicense+ "&" + "sign=" + click_sign;
+
         try {
-            doPost(DataPre.clickScene_url , click_json);
+            doGet02(DataPre.clickScene_url+click_params , click_json);
         }catch (Exception e){
             System.out.println(e);
         }

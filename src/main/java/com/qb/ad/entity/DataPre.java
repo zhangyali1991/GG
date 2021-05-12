@@ -29,7 +29,7 @@ public class DataPre {
     public static final String exposure_url_new = url_open_pre +"/api/v1/advert/list";
     public static final String exposure_url_scene = url_open_pre +"/api/v1/grid-advert/list/";
     public static final String click_url = url_click_pre +"/api/v1/advert/redirect/";
-    public static final String clickScene_url = url_click_pre +"/api/v1/grid-advert/redirect/";
+    public static final String clickScene_url = url_click_pre +"/api/v1/grid-advert/redirect";
     public static final String clickUpScene_url = url_click_pre +"/api/v1/grid-advert/click/";
     public static final String click_url_up = url_click_pre +"/api/v1/advert/click/";
     public static final String park_data_url = url_open_pre +"/api/v1/vehicle/data";

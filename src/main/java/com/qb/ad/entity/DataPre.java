@@ -42,6 +42,9 @@ public class DataPre {
 
     public static final String priv_key="MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgx6oM7uAweLC1PMc+5hyjGxZUXs3oXUK9Tq8JvEkewzygCgYIKoZIzj0DAQehRANCAAS0UEinfVnTeNbjGIOY1ExB+u48O67ThnebBoDy/L4HapPYo0o2KXb3O/HPAMnpExYMC8xcQhxQwGmUU4zOC37B";
     public static final String pub_key="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtFBIp31Z03jW4xiDmNRMQfruPDuu04Z3mwaA8vy+B2qT2KNKNil29zvxzwDJ6RMWDAvMXEIcUMBplFOMzgt+wQ==";
+    //****场地场景相关新增url
+    public static final String grid_url = url_open_pre +"/api/v1/grid";//新增场地，更新场地，获取场地信息
+    public static final String adPos_grid_url= url_open_pre +"/api/v1/grid-pos";//开通广告页，获取广告页
 
     //随机数
     public static final SimpleDateFormat formatter = new SimpleDateFormat("MMddHHmmss");

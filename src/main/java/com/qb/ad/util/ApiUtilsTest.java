@@ -642,14 +642,15 @@ public class ApiUtilsTest {
             //接口地址：[POST] https://api-test.anbokeji.net/api/v1/grid
             Map <String, String> sceneMap = new HashMap <>();
             sceneMap.put("partnerId", partnerId);//流量主ID
-            sceneMap.put("gridId", DataTest.gridId);//自定义场地ID(非必填)
+            sceneMap.put("gridId",DataTest.gridId);//自定义场地ID(非必填)
             sceneMap.put("gridName", DataTest.parkName);//场地名称
             sceneMap.put("scene", scene);//场地场景
             sceneMap.put("cityId", DataTest.cityId);//城市ID
-            sceneMap.put("type", "0");//场地类型(非必填)
+            sceneMap.put("type", "7");//场地类型(非必填)
             //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
-            sceneMap.put("lng", "东经116°20");//经度(非必填)
-            sceneMap.put("lat", "北纬39°56′");//纬度(非必填)
+            sceneMap.put("lng", "116.413634");//经度(非必填)东经116°20
+            sceneMap.put("lat", "39.910843");//纬度(非必填)北纬39°56
+            sceneMap.put("deviceNumber","1werwr");
             String parkSign = ECCSignUtil.sign(private_key, sceneMap);
             sceneMap.put("sign", parkSign);
             String park_json = JSONObject.toJSONString(sceneMap);
@@ -673,13 +674,14 @@ public class ApiUtilsTest {
             Map<String, String> sceneMap = new HashMap<>();
             sceneMap.put("partnerId", partnerId);//流量主ID(必填)
             sceneMap.put("gridId", gridId);//自定义场地ID(必填)
-            sceneMap.put("gridName", DataTest.parkName);//场地名称
-            sceneMap.put("scene", scene);//场地场景
-            sceneMap.put("cityId", DataTest.cityId);//城市ID
-            sceneMap.put("type", "0");//场地类型
+            //sceneMap.put("scene", scene);//场地场景
+            //sceneMap.put("gridName","202104新场地0423131907");//场地名称 DataTest.parkName
+            /*sceneMap.put("cityId", DataTest.cityId);//城市ID*/
+            sceneMap.put("type", "5");//场地类型
             //场地类型枚举:0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
-            sceneMap.put("lng", "东经116°20");//经度(非必填)
-            sceneMap.put("lat", "北纬39°56′");//纬度(非必填)
+           /* sceneMap.put("lng", "东经116°20");//经度(非必填)
+            sceneMap.put("lat", "北纬39°56′");//纬度(非必填)*/
+            sceneMap.put("deviceNumber","200");
             String parkSign = ECCSignUtil.sign(private_key, sceneMap);
             sceneMap.put("sign", parkSign);
             String park_json = JSONObject.toJSONString(sceneMap);

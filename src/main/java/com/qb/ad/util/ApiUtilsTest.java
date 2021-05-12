@@ -539,9 +539,11 @@ public class ApiUtilsTest {
         String sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", sign);
         String click_json = JSONObject.toJSONString(clickMap);
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile +"&"+"userLicense="+userLicense+ "&" +"userIp="+userIp+"&"+ "sign=" + sign;
+
         String res = "";
         try {
-            res = doPost(DataTest.click_url_scene, click_json);
+            res = doGet02(DataTest.click_url_scene+click_params, click_json);
         } catch (Exception e) {
             System.out.println(e);
         }

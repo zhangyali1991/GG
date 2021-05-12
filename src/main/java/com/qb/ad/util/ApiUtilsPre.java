@@ -541,7 +541,7 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
             //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
             sceneMap.put("lng", "116.413634");//经度(非必填)东经116°20
             sceneMap.put("lat", "39.910843");//纬度(非必填)北纬39°56
-            sceneMap.put("deviceNumber","1werwr");
+            sceneMap.put("deviceNumber","100");
             String parkSign = ECCSignUtil.sign(private_key, sceneMap);
             sceneMap.put("sign", parkSign);
             String park_json = JSONObject.toJSONString(sceneMap);

@@ -413,9 +413,11 @@ public class ApiUtilsPro {
         String click_sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", click_sign);
         String click_json = JSONObject.toJSONString(clickMap);
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" +"userIp="+userIp+ "&" + "openId="+openId+ "&" +"userMobile=" + DataProduct.userMobile +"&"+ "sign=" + click_sign;
+
 
         try {
-            doPost( DataProduct.clickScene_url, click_json);
+            doGet02( DataProduct.clickScene_url+click_params, click_json);
         }catch (Exception e){
             System.out.println(e);
         }

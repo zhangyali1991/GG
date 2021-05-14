@@ -29,7 +29,7 @@ public class DataProduct {
     public static final String exposure_url_sjxp = url_open_pro +"/api/v1/advert/ticket";
     public static final String exposureScene_url_sjxp = url_open_pro +"/aapi/v1/grid-advert/ticket/";
     public static final String click_url = url_open_pro +"/api/v1/advert/redirect/";
-    public static final String clickScene_url = url_open_pro +"/api/v1/grid-advert/redirect/";
+    public static final String clickScene_url = url_open_pro +"/api/v1/grid-advert/redirect";
     public static final String click_url_up = url_open_pro +"/api/v1/advert/click/";
     public static final String clickScene_url_up = url_open_pro +"/api/v1/grid-advert/click/";
     public static final String profit_url_pro = url_open_pro +"/api/v1/park/profit/";

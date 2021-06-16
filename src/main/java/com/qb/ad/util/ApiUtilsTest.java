@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.qb.ad.entity.DataTest;
+import com.qb.ad.jdbc.MysqlDeal;
 import com.zzrb.util.ECCCryptUtil;
 import com.zzrb.util.ECCSignUtil;
 
@@ -13,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.qb.ad.entity.BaseData.encrypt;
+import static com.qb.ad.jdbc.MysqlDeal.mysqlDealsString;
 import static com.qb.ad.util.HttpGG.*;
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 
@@ -25,9 +27,9 @@ import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
  * 后台登录
  */
 public class ApiUtilsTest {
-   public static String userLicense = "京A" + randomNumeric(5);
-    public static  String openId = randomNumeric(8);
-    public static   String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
+    public static String userLicense = "京A" + randomNumeric(5);
+    public static String openId = randomNumeric(8);
+    public static String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
 
     //生成流量主账户
     public static String createAccount(String public_key, String private_key) throws Exception {
@@ -36,11 +38,13 @@ public class ApiUtilsTest {
             createAccountMap.put("name", DataTest.name);//用户名称
             createAccountMap.put("regType", DataTest.regType);//注册类型
             createAccountMap.put("cityId", DataTest.cityId);//所在城市
-            createAccountMap.put("accountType", DataTest.accountType);//客户类型? 0:车场; 1:媒介; 3:代理商
+            createAccountMap.put("accountType", DataTest.accountType);//客户类型 15	设备供应商30	系统供应商45	运营管理商60	工程服务商75	综合服务商90	其他
             createAccountMap.put("contactName", DataTest.contactName);//联系人
             createAccountMap.put("contactMobile", DataTest.contactMobile);//联系电话
             createAccountMap.put("source", DataTest.source);//客户来源
             createAccountMap.put("manager", DataTest.manager);//客户经理
+            createAccountMap.put("address", DataTest.address);//详细地址
+            createAccountMap.put("mailbox", DataTest.mailbox);//电子邮箱
             createAccountMap.put("accountName", DataTest.accountName);//开户人名称
             createAccountMap.put("bankName", DataTest.bankName);//银行名称
             createAccountMap.put("accountNo", DataTest.accountNo);//银行名称
@@ -70,17 +74,19 @@ public class ApiUtilsTest {
     public static void updateAccount(String contactMobile, String partnerId, String private_key) throws Exception {
         try {
             Map<String, String> updateAccountMap = new HashMap<String, String>();
-//            updateAccountMap.put("name", DataTest.name);//用户名称
-//            updateAccountMap.put("regType", DataTest.regType);//注册类型
-//            updateAccountMap.put("cityId", DataTest.cityId);//所在城市
-//            updateAccountMap.put("accountType", DataTest.accountType);//客户类型? 0:车场; 1:媒介; 3:代理商
-//            updateAccountMap.put("contactName", DataTest.contactName);//联系人
+            updateAccountMap.put("name", DataTest.name);//用户名称
+            updateAccountMap.put("regType", DataTest.regType);//注册类型
+            updateAccountMap.put("cityId", DataTest.cityId);//所在城市
+            updateAccountMap.put("accountType", DataTest.accountType);//客户类型
+            updateAccountMap.put("address", DataTest.address);//详细地址
+            updateAccountMap.put("mailbox", DataTest.mailbox);//电子邮箱
+            updateAccountMap.put("contactName", DataTest.contactName);//联系人
             updateAccountMap.put("contactMobile", contactMobile);//联系电话
-//            updateAccountMap.put("source", DataTest.source);//客户来源
-//            updateAccountMap.put("manager", DataTest.manager);//客户经理
-//            updateAccountMap.put("accountName", DataTest.accountName);//开户人名称
-//            updateAccountMap.put("bankName", DataTest.bankName);//银行名称
-//            updateAccountMap.put("accountNo", DataTest.accountNo);//银行名称
+            updateAccountMap.put("source", DataTest.source);//客户来源
+            updateAccountMap.put("manager", DataTest.manager);//客户经理
+            updateAccountMap.put("accountName", DataTest.accountName);//开户人名称
+            updateAccountMap.put("bankName", DataTest.bankName);//银行名称
+            updateAccountMap.put("accountNo", DataTest.accountNo);//银行名称
             updateAccountMap.put("password", ECCCryptUtil.encrypt(DataTest.password, encrypt));//登录密码
             updateAccountMap.put("partnerId", partnerId);           //流量主业务id
             String updateAccountSign = ECCSignUtil.sign(private_key, updateAccountMap);
@@ -152,6 +158,7 @@ public class ApiUtilsTest {
 
         }
     }
+
     //新增广告位v1
     public static void createAdvertisePosition_v1(String adPosIds, String parkId, String partnerId, String private_key) {
         try {
@@ -159,7 +166,7 @@ public class ApiUtilsTest {
             adPosMap.put("adPosIds", adPosIds);
             adPosMap.put("parkId", parkId);
             adPosMap.put("partnerId", partnerId);
-            adPosMap.put( "status", "1" );  //v2版本需要注释
+            adPosMap.put("status", "1");  //v2版本需要注释
             String adPosSign = ECCSignUtil.sign(private_key, adPosMap);
             adPosMap.put("sign", adPosSign);
             String adPos_json = JSONObject.toJSONString(adPosMap);
@@ -327,6 +334,7 @@ public class ApiUtilsTest {
             return null;
         }
     }
+
     public static String exposureScenePost(String gridId, String partnerId, String private_key, String adPosId, String medium) throws Exception {
         String userLicense = "京A" + randomNumeric(5);
         String openId = randomNumeric(8);
@@ -401,7 +409,7 @@ public class ApiUtilsTest {
 
     //    商家小票曝光无场景POST
     public static String exposure_sjxp_POST(String park_Id, String partnerId, String private_key) throws Exception {
-        String  responseData ="";
+        String responseData = "";
         String userLicense = "京A" + randomNumeric(5);
         String openId = randomNumeric(8);
         String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
@@ -416,7 +424,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
         try {
-           responseData = doPost2(DataTest.exposure_sjxp_url, exposure_json, exposure_json);
+            responseData = doPost2(DataTest.exposure_sjxp_url, exposure_json, exposure_json);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -434,13 +442,15 @@ public class ApiUtilsTest {
             return null;
         }
     }
-//    商家小票场景曝光post
-    public static String exposure_sjxp_scene_Post(String gridId, String partnerId, String private_key) throws Exception {
-        String  responseData ="";
+
+    //    商家小票场景曝光post
+    public static String exposure_sjxp_scene_Post(String adPosId, String gridId, String partnerId, String private_key) throws Exception {
+        String responseData = "";
         String userLicense = "京A" + randomNumeric(5);
         String openId = randomNumeric(8);
         String userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
         Map<String, String> getAdvertMap = new HashMap<>();
+        getAdvertMap.put("adPosId", adPosId);
         getAdvertMap.put("gridId", gridId);
         getAdvertMap.put("partnerId", partnerId);
         getAdvertMap.put("userMobile", DataTest.userMobile);
@@ -469,7 +479,8 @@ public class ApiUtilsTest {
             return null;
         }
     }
-//    商家小票曝光无场景GET
+
+    //    商家小票曝光无场景GET
     public static String exposure_sjxp_get(String park_Id, String partnerId, String private_key) throws Exception {
         String userLicense = "京A" + randomNumeric(5);
         String openId = randomNumeric(8);
@@ -482,7 +493,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("userLicense", userLicense);
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
-       String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
+        String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
         try {
@@ -500,11 +511,12 @@ public class ApiUtilsTest {
             return null;
         }
     }
+
     //点击click
     public static void click(String url, String adId, String park_Id, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "京A" + randomNumeric(5);
-        String userMobile="188" + randomNumeric(7);
+        String userMobile = "188" + randomNumeric(7);
         Map<String, String> clickMap = new HashMap<>();
         clickMap.put("adId", adId);
         clickMap.put("parkId", park_Id);
@@ -515,7 +527,7 @@ public class ApiUtilsTest {
         String sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", sign);
         String click_json = JSONObject.toJSONString(clickMap);
-        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "parkId=" + park_Id + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile +"&"+"userLicense="+userLicense+ "&" + "sign=" + sign;
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "parkId=" + park_Id + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile + "&" + "userLicense=" + userLicense + "&" + "sign=" + sign;
         String res = "";
         try {
             res = doGet02(url + click_params, click_json);
@@ -523,11 +535,12 @@ public class ApiUtilsTest {
             System.out.println(e);
         }
     }
+
     //点击click
-    public static void clickScene( String adId, String gridId, String partnerId, String private_key) throws Exception {
+    public static void clickScene(String adId, String gridId, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "京A" + randomNumeric(5);
-        String userMobile="188" + randomNumeric(7);
+        String userMobile = "188" + randomNumeric(7);
         Map<String, String> clickMap = new HashMap<>();
         clickMap.put("adId", adId);
         clickMap.put("gridId", gridId);
@@ -539,11 +552,11 @@ public class ApiUtilsTest {
         String sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", sign);
         String click_json = JSONObject.toJSONString(clickMap);
-        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile +"&"+"userLicense="+userLicense+ "&" +"userIp="+userIp+"&"+ "sign=" + sign;
+        String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "gridId=" + gridId + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile + "&" + "userLicense=" + userLicense + "&" + "userIp=" + userIp + "&" + "sign=" + sign;
 
         String res = "";
         try {
-            res = doGet02(DataTest.click_url_scene+click_params, click_json);
+            res = doGet02(DataTest.click_url_scene + click_params, click_json);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -570,8 +583,9 @@ public class ApiUtilsTest {
         }
 
     }
-//    场景小程序上报点击
-    public static void clickUpScene (String adId, String gridId, String partnerId, String private_key) throws Exception {
+
+    //    场景小程序上报点击
+    public static void clickUpScene(String adId, String gridId, String partnerId, String private_key) throws Exception {
         String openId = randomNumeric(8);
         String userLicense = "川A" + randomNumeric(5);
         Map<String, String> clickMap = new HashMap<>();
@@ -642,24 +656,25 @@ public class ApiUtilsTest {
     public static String createGrid(String partnerId, String private_key, String scene) throws Exception {
         try {
             //接口地址：[POST] https://api-test.anbokeji.net/api/v1/grid
-            Map <String, String> sceneMap = new HashMap <>();
+            Map<String, String> sceneMap = new HashMap<>();
             sceneMap.put("partnerId", partnerId);//流量主ID
-            sceneMap.put("gridId",DataTest.gridId);//自定义场地ID(非必填)
+            sceneMap.put("gridId", DataTest.gridId);//自定义场地ID(非必填)
             sceneMap.put("gridName", DataTest.parkName);//场地名称
+            sceneMap.put("address", DataTest.address);//详细地址
             sceneMap.put("scene", scene);//场地场景
             sceneMap.put("cityId", DataTest.cityId);//城市ID
             sceneMap.put("type", "7");//场地类型(非必填)
             //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
             sceneMap.put("lng", "116.413634");//经度(非必填)东经116°20
             sceneMap.put("lat", "39.910843");//纬度(非必填)北纬39°56
-            sceneMap.put("deviceNumber","1werwr");
+            sceneMap.put("deviceNumber", "1");
             String parkSign = ECCSignUtil.sign(private_key, sceneMap);
             sceneMap.put("sign", parkSign);
             String park_json = JSONObject.toJSONString(sceneMap);
             String requestData = doPost(DataTest.grid_url, park_json);
-            Map <String, Object> resultMap = JSON.parseObject(requestData, Map.class);
+            Map<String, Object> resultMap = JSON.parseObject(requestData, Map.class);
             String result = resultMap.get("result").toString();
-            Map <String, String> result_map = JSONObject.parseObject(result, new TypeReference <Map <String, String>>() {
+            Map<String, String> result_map = JSONObject.parseObject(result, new TypeReference<Map<String, String>>() {
             });
             String gridId = result_map.get("gridId").toString();
             System.out.println("场地ID gridId: " + gridId);
@@ -669,21 +684,23 @@ public class ApiUtilsTest {
         }
         return null;
     }
+
     //**场景**流量主更新场地
-    public static void updateGrid(String gridId, String partnerId, String private_key,String scene) throws Exception {
+    public static void updateGrid(String gridId, String partnerId, String private_key, String scene) throws Exception {
         try {
             //接口地址：[PUT] https://api-test.anbokeji.net/api/v1/grid
             Map<String, String> sceneMap = new HashMap<>();
             sceneMap.put("partnerId", partnerId);//流量主ID(必填)
             sceneMap.put("gridId", gridId);//自定义场地ID(必填)
-            //sceneMap.put("scene", scene);//场地场景
-            //sceneMap.put("gridName","202104新场地0423131907");//场地名称 DataTest.parkName
-            /*sceneMap.put("cityId", DataTest.cityId);//城市ID*/
+            sceneMap.put("scene", scene);//场地场景
+            sceneMap.put("gridName", "202104新场地0423131907");//场地名称 DataTest.parkName
+            sceneMap.put("address", DataTest.address);//详细地址
+            sceneMap.put("cityId", DataTest.cityId);//城市ID
             sceneMap.put("type", "5");//场地类型
             //场地类型枚举:0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
            /* sceneMap.put("lng", "东经116°20");//经度(非必填)
             sceneMap.put("lat", "北纬39°56′");//纬度(非必填)*/
-            sceneMap.put("deviceNumber","200");
+            sceneMap.put("deviceNumber", "200");
             String parkSign = ECCSignUtil.sign(private_key, sceneMap);
             sceneMap.put("sign", parkSign);
             String park_json = JSONObject.toJSONString(sceneMap);
@@ -708,6 +725,7 @@ public class ApiUtilsTest {
 
         }
     }
+
     //**场地场景****开通广告页
     public static void createSceneAdvertisePosition(String adPosIds, String gridId, String partnerId, String private_key) {
         try {
@@ -738,5 +756,16 @@ public class ApiUtilsTest {
         } catch (Exception e) {
             System.out.println("获取场景广告位失败！");
         }
+    }
+
+    /**
+     * 根据流量主名称获取私钥private_key/partnerId
+     */
+    public static Map<String, String> getValueByName(String trafficName) {
+        String sql = "SELECT partner_id, private_key FROM traffic_info WHERE traffic_name = '" + trafficName + "'";
+        String[] str = new String[]{"partner_id", "private_key"};
+        Map<String, String> selectMap = MysqlDeal.mysqlDeal(sql, str);
+
+        return selectMap;
     }
 }

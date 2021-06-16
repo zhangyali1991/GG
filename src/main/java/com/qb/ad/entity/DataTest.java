@@ -52,12 +52,14 @@ public class DataTest {
     public static final String contactMobile ="188" + current.substring( 2,10 ); //联系电话  *****不能重复*****
     public static final String regType = "1"; //注册类型
     public static final String cityId = CityIdEnum.BEIJING.getCode(); //所在城市
-    public static final String accountType ="0"; //客户类型？？？？0:车场; 1:媒介; 3:代理商  ？？？
+    public static final String accountType ="15"; //客户类型：15设备供应商30系统供应商45运营管理商60工程服务商75综合服务商90其他
     public static final String contactName ="风先生"; //联系人
     public static final String source ="商务谈判"; //客户来源
     public static final String manager ="张经理"; //客户经理
+    public static final String address ="北京市朝阳区国门大厦D座4楼百联优力"; //详细地址
+    public static final String mailbox ="123456@qq.com"; //电子邮箱
     public static final String accountName ="周小川"; //开户人名称
-    public static final String bankName ="工商银行"; //银行名称
+    public static final String bankName ="中国工商银行西安电子工业区支行中国工商银行西安电子工"; //银行名称
     public static final String accountNo ="00018877777776666"; //银行名称
     public static final String password ="88888888";
 

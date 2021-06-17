@@ -55,6 +55,8 @@ public class DataProduct {
     public static final String cityId ="010"; //所在城市
     public static final String accountType ="媒介"; //客户类型？？？？0:车场; 1:媒介; 3:代理商  ？？？
     public static final String contactName ="马云"; //联系人
+    public static final String mailbox ="test@qq.com"; //邮件
+    public static final String address ="北京市朝阳区凤凰置地广场21层(测试)"; //详细地址
     public static final String source ="商务谈判"; //客户来源
     public static final String manager ="张总经理"; //客户经理
     public static final String accountName ="马云"; //开户人名称

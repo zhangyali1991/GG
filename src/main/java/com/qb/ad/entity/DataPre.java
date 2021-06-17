@@ -60,6 +60,9 @@ public class DataPre {
     public static final String contactName ="马云"; //联系人
     public static final String source ="商务谈判"; //客户来源
     public static final String manager ="张总经理"; //客户经理
+    public static final String gridId = "2021场地ID" + current; // 自定义场地id名称 *****不能重复*****; //客户经理
+    public static final String address ="北京市朝阳区凤凰置地广场H座21层"; //详细地址
+    public static final String mailbox ="123456@qq.com"; //详细地址
     public static final String accountName ="马云"; //开户人名称
     public static final String bankName ="工商银行"; //银行名称
     public static final String accountNo ="6214830137681705"; //银行名称

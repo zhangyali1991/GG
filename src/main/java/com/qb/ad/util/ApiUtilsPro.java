@@ -34,6 +34,8 @@ public class ApiUtilsPro {
         createAccountMap.put("cityId", DataProduct.cityId);//所在城市
         createAccountMap.put("accountType", DataProduct.accountType);//客户类型? 0:车场; 1:媒介; 3:代理商
         createAccountMap.put("contactName", DataProduct.contactName);//联系人
+        createAccountMap.put("mailbox", DataProduct.mailbox);//邮件
+        createAccountMap.put("address", DataProduct.address);//详细地址
         createAccountMap.put("contactMobile", DataProduct.contactMobile);//联系电话
         createAccountMap.put("source", DataProduct.source);//客户来源
         createAccountMap.put("manager", DataProduct.manager);//客户经理
@@ -71,6 +73,8 @@ public class ApiUtilsPro {
              updateAccountMap.put("accountType", DataProduct.accountType);//客户类型? 0:车场; 1:媒介; 3:代理商
              updateAccountMap.put("contactName", DataProduct.contactName);//联系人
              updateAccountMap.put("contactMobile", DataProduct.contactMobile);//联系电话
+             updateAccountMap.put("address", DataProduct.address);//详细地址
+             updateAccountMap.put("mailbox", DataProduct.mailbox);//邮件
              updateAccountMap.put("source", DataProduct.source);//客户来源
              updateAccountMap.put("manager", DataProduct.manager);//客户经理
              updateAccountMap.put("accountName", DataProduct.accountName);//开户人名称

@@ -38,6 +38,8 @@ public class ApiUtilsPre {
             createAccountMap.put("contactMobile", DataPre.contactMobile);//联系电话
             createAccountMap.put("source", DataPre.source);//客户来源
             createAccountMap.put("manager", DataPre.manager);//客户经理
+            createAccountMap.put("address", DataPre.address);//详细地址
+            createAccountMap.put("mailbox", DataPre.mailbox);//邮件
             createAccountMap.put("accountName", DataPre.accountName);//开户人名称
             createAccountMap.put("bankName", DataPre.bankName);//银行名称
             createAccountMap.put("accountNo", DataPre.accountNo);//银行名称
@@ -72,7 +74,10 @@ public class ApiUtilsPre {
             updateAccountMap.put("cityId", DataPre.cityId);//所在城市
             updateAccountMap.put("accountType", DataPre.accountType);//客户类型? 0:车场; 1:媒介; 3:代理商
             updateAccountMap.put("contactName", DataPre.contactName);//联系人
-            updateAccountMap.put("contactMobile", DataPre.contactMobile);//联系电话
+            updateAccountMap.put("address", DataPre.address);//详细地址
+            updateAccountMap.put("mailbox", DataPre.mailbox);//邮件
+            updateAccountMap.put("contactMobile", DataPre.contactMobile);//联系电话// 18801455883
+            updateAccountMap.put("contactMobile", "15080452124");//联系电话// 18801455883
             updateAccountMap.put("source", DataPre.source);//客户来源
             updateAccountMap.put("manager", DataPre.manager);//客户经理
             updateAccountMap.put("accountName", DataPre.accountName);//开户人名称
@@ -289,12 +294,13 @@ public class ApiUtilsPre {
     }
 
     //post曝光（场景)
-    public static Map<String, String> exposure_sjxpScenePost(String gridId ,String partnerId ,String private_key) throws Exception{
+    public static Map<String, String> exposure_sjxpScenePost(String adPosId,String gridId ,String partnerId ,String private_key) throws Exception{
         String userLicense = "京A" + randomNumeric(5);
         String openId =  randomNumeric(8);
         String userIp = randomNumeric(2)+".1.1."+ randomNumeric(2);
         String responseData = "";
         Map <String, String> getAdvertMap = new HashMap <>();
+        getAdvertMap.put("adPosId", adPosId);
         getAdvertMap.put("gridId", gridId);
         getAdvertMap.put("partnerId", partnerId);
         getAdvertMap.put("userMobile", DataPre.userMobile);
@@ -535,10 +541,11 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
             //接口地址：[POST] https://api-test.anbokeji.net/api/v1/grid
             Map <String, String> sceneMap = new HashMap <>();
             sceneMap.put("partnerId", partnerId);//流量主ID
-            sceneMap.put("gridId",DataTest.gridId);//自定义场地ID(非必填)
+            sceneMap.put("gridId",DataPre.gridId);//自定义场地ID(非必填)
             sceneMap.put("gridName", DataTest.parkName);//场地名称
             sceneMap.put("scene", scene);//场地场景
             sceneMap.put("cityId", DataTest.cityId);//城市ID
+            sceneMap.put("address", DataPre.address);//详细地址
             sceneMap.put("type", "7");//场地类型(非必填)
             //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
             sceneMap.put("lng", "116.413634");//经度(非必填)东经116°20
@@ -567,10 +574,11 @@ public static Map<String, String> exposure_post(String park_Id ,String partnerId
             Map<String, String> sceneMap = new HashMap<>();
             sceneMap.put("partnerId", partnerId);//流量主ID(必填)
             sceneMap.put("gridId", gridId);//自定义场地ID(必填)
-            //sceneMap.put("scene", scene);//场地场景
-            //sceneMap.put("gridName","202104新场地0423131907");//场地名称 DataTest.parkName
+            sceneMap.put("scene", scene);//场地场景
+            sceneMap.put("gridName","202104新场地0423131907");//场地名称 DataTest.parkName
             /*sceneMap.put("cityId", DataTest.cityId);//城市ID*/
             sceneMap.put("type", "5");//场地类型
+            sceneMap.put("address", DataPre.address);//详细地址
             //场地类型枚举:0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
            /* sceneMap.put("lng", "东经116°20");//经度(非必填)
             sceneMap.put("lat", "北纬39°56′");//纬度(非必填)*/

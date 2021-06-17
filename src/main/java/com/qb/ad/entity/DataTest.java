@@ -37,6 +37,7 @@ public class DataTest {
     public static final String traffic_update_url = url_post + "/api-post/traffic/update";
     public static final String traffic_share_url = url_post + "/api-post/traffic/share/update";
     public static final String plan_create_url = url_post + "/api-post/plan/create";
+    public static final String payPlatformUrl = url_post + "/api/v1/grid/profit/platform";
 
     //****场地场景相关新增url
     public static final String grid_url = url_open +"/api/v1/grid";//新增场地，更新场地，获取场地信息

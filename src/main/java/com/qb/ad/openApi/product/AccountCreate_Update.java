@@ -16,7 +16,7 @@ import static com.qb.ad.util.ApiUtilsPro.updateAccount;
     public static void accountCreate_Update() throws Exception {
 
         //生成流量主账户
-//        createAccount(DataProduct.pub_key , DataProduct.priv_key );
+        createAccount(DataProduct.pub_key , DataProduct.priv_key );
 
         //更新流量主账户
         updateAccount(DataProduct.priv_key);

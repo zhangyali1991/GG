@@ -45,6 +45,7 @@ public class DataPre {
     //****场地场景相关新增url
     public static final String grid_url = url_open_pre +"/api/v1/grid";//新增场地，更新场地，获取场地信息
     public static final String adPos_grid_url= url_open_pre +"/api/v1/grid-pos";//开通广告页，获取广告页
+    public static final String getPayProfitUrl= url_open_pre +"/api/v1/grid/profit";//查询场地收益
 
     //随机数
     public static final SimpleDateFormat formatter = new SimpleDateFormat("MMddHHmmss");

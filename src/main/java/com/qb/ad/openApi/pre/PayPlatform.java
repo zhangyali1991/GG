@@ -24,7 +24,7 @@ public class PayPlatform {
         };
     }
 
-@Test
+@Test(dataProvider = "data")
     public void payPlat(String gridId,String platform) throws Exception {
     Map<String, String> map = new HashMap<>();
     map.put("partnerId", partnerId);

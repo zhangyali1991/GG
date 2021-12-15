@@ -2,6 +2,7 @@ package com.qb.ad.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPath;
 import com.alibaba.fastjson.TypeReference;
 import com.qb.ad.entity.DataTest;
 import com.qb.ad.jdbc.MysqlDeal;
@@ -13,7 +14,10 @@ import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.qb.ad.entity.BaseData.encrypt;
+import static com.qb.ad.entity.BaseData.*;
+import static com.qb.ad.entity.DataQa.create_account_url_qa;
+import static com.qb.ad.entity.DataQa.name_qa;
+import static com.qb.ad.entity.DataTest.create_account_url;
 import static com.qb.ad.jdbc.MysqlDeal.mysqlDealsString;
 import static com.qb.ad.util.HttpGG.*;
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
@@ -48,13 +52,13 @@ public class ApiUtilsTest {
             createAccountMap.put("accountName", DataTest.accountName);//开户人名称
             createAccountMap.put("bankName", DataTest.bankName);//银行名称
             createAccountMap.put("accountNo", DataTest.accountNo);//银行名称
-            createAccountMap.put("password", ECCCryptUtil.encrypt(DataTest.password, encrypt));//登录密码
+            createAccountMap.put("password", ECCCryptUtil.encrypt(DataTest.password,anboPubKey_test));//登录密码
             createAccountMap.put("publicKey", public_key);//公钥
             String createAccountSign = ECCSignUtil.sign(private_key, createAccountMap);
             System.out.println("创建流量主sign ： " + createAccountSign);
             createAccountMap.put("sign", createAccountSign);
             String json = JSONObject.toJSONString(createAccountMap);
-            String responseData = HttpGG.doPost(DataTest.create_account_url, json);
+            String responseData = HttpGG.doPost(create_account_url, json);
             System.out.println("创建流量主名称name ： " + DataTest.name);
 
             Map<String, Object> resultMap = JSON.parseObject(responseData, Map.class);
@@ -93,7 +97,7 @@ public class ApiUtilsTest {
             System.out.println("更新流量主sign ： " + updateAccountSign);
             updateAccountMap.put("sign", updateAccountSign);
             String json = JSONObject.toJSONString(updateAccountMap);
-            HttpGG.doPut(DataTest.create_account_url, json);
+            HttpGG.doPut(create_account_url, json);
 
         } catch (Exception e) {
             System.out.println("更新流量主失败:" + e);
@@ -265,19 +269,23 @@ public class ApiUtilsTest {
 
     //曝光exposure【POST】
     public static String exposure_POST(String park_Id, String partnerId, String private_key, String adPosId) throws Exception {
-        String userLicense = "京A27848";
-        String openId = "53294186";
-        String userIp = "55.1.1.98";
+        userLicense = "京A" + randomNumeric(5);
+//        userLicense = "%E8%BE%BDB551FH";//编码后车牌号
+//        userLicense = "ab_w123C,*";//乱码
+//        userLicense = "   ";//null
+        openId = randomNumeric(8);
+        userIp = randomNumeric(2) + ".1.1." + randomNumeric(2);
         String responseData = "";
         Map<String, String> getAdvertMap = new HashMap<>();
         getAdvertMap.put("parkId", park_Id);
         getAdvertMap.put("partnerId", partnerId);
         getAdvertMap.put("adPosId", adPosId);
         getAdvertMap.put("userMobile", DataTest.userMobile);
-        getAdvertMap.put("userMobile", "18811321090");
+//        getAdvertMap.put("userMobile", "18811321090");
         getAdvertMap.put("userLicense", userLicense);
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
+        getAdvertMap.put("ua", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
 //        getAdvertMap.put("sign", "MEUCIGDAQXp45GYzESJXdDsrrPcL+BFsLpPlP7goDinom/otAiEAypOz77sC8gYepghwOnoN25ArB86YQGCkuSWoIpfvOJQ=");
@@ -316,6 +324,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
         getAdvertMap.put("medium", medium);
+//        getAdvertMap.put("ua", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
@@ -345,10 +354,11 @@ public class ApiUtilsTest {
         getAdvertMap.put("partnerId", partnerId);
         getAdvertMap.put("adPosId", adPosId);
         getAdvertMap.put("userMobile", DataTest.userMobile);
-        getAdvertMap.put("userLicense", userLicense);
+        getAdvertMap.put("userLicense", "    ");
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
         getAdvertMap.put("medium", medium);
+        getAdvertMap.put("ua", "");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
@@ -386,6 +396,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
         getAdvertMap.put("medium", medium);
+        getAdvertMap.put("ua", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
 //        getAdvertMap.put("sign", "MEUCIGDAQXp45GYzESJXdDsrrPcL+BFsLpPlP7goDinom/otAiEAypOz77sC8gYepghwOnoN25ArB86YQGCkuSWoIpfvOJQ=");
@@ -420,6 +431,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("userLicense", userLicense);
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
+        getAdvertMap.put("ua", "");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
@@ -493,6 +505,7 @@ public class ApiUtilsTest {
         getAdvertMap.put("userLicense", userLicense);
         getAdvertMap.put("openId", openId);
         getAdvertMap.put("userIp", userIp);
+//        getAdvertMap.put("ua", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36");
         String exposure_sign = ECCSignUtil.sign(private_key, getAdvertMap);
         getAdvertMap.put("sign", exposure_sign);
         String exposure_json = JSONObject.toJSONString(getAdvertMap);
@@ -526,11 +539,10 @@ public class ApiUtilsTest {
         clickMap.put("openId", openId);
         String sign = ECCSignUtil.sign(private_key, clickMap);
         clickMap.put("sign", sign);
-        String click_json = JSONObject.toJSONString(clickMap);
         String click_params = "?" + "adId=" + adId + "&" + "partnerId=" + partnerId + "&" + "parkId=" + park_Id + "&" + "openId=" + openId + "&" + "userMobile=" + userMobile + "&" + "userLicense=" + userLicense + "&" + "sign=" + sign;
         String res = "";
         try {
-            res = doGet02(url + click_params, click_json);
+            res = doGet03(url + click_params);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -663,7 +675,7 @@ public class ApiUtilsTest {
             sceneMap.put("address", DataTest.address);//详细地址
             sceneMap.put("scene", scene);//场地场景
             sceneMap.put("cityId", DataTest.cityId);//城市ID
-            sceneMap.put("type", "7");//场地类型(非必填)
+            sceneMap.put("type", "0");//场地类型(非必填)
             //场地类型枚举： 0其他1商超2写字楼3酒店4风景区5游乐场6医院7事业单位8交通枢纽9住宅小区
             sceneMap.put("lng", "116.413634");//经度(非必填)东经116°20
             sceneMap.put("lat", "39.910843");//纬度(非必填)北纬39°56
@@ -767,5 +779,19 @@ public class ApiUtilsTest {
         Map<String, String> selectMap = MysqlDeal.mysqlDeal(sql, str);
 
         return selectMap;
+    }
+    /*
+    * 登录运营后台，获取token
+    * */
+    public static String getToken() throws IOException {
+        Map<String,String> map=new HashMap<>();
+        map.put("username","admin");
+        map.put("password","123456");
+        String param=JSONObject.toJSONString(map);
+        String response = doPost("http://api-inner-sit.anbokeji.net:8000/api-user/user/loginOps", param);
+        JSONObject object=JSONObject.parseObject(response);
+        Object result= JSONPath.eval(object,"result");
+        Object token = JSONPath.eval(result, "token");
+        return String.valueOf(token);
     }
 }
